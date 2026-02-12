@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>the Hoxton</title>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<meta name='Title' content='the Hoxton Hotel'>
+<meta name='Subject' content='the Hoxton clone coding'>
+<meta name='Keywords' content='hotel, booking, global'>
+<meta name='Author' content='seongeun'>
+<meta name='Publisher' content='seongeun'>
+<meta name='Description' content='clone coding responsive web'>
+<meta name='Author-Date' content='260126'>
+<meta name='Copyright' content='seongeun'>
+
+<!-- 접근성 텍스트(skip) 숨김 -->
+<style>#skip{overflow: hidden; position:absolute; width:0; height:0; line-height:0; text-indent:-9999px;}</style>
+
+<!-- 폰트어썸 -->
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+<!-- 구글폰트 아이콘 -->
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0' />
+
+<!-- CSS 리셋 -->
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css'>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+<!-- 제이쿼리 3.7 CDN -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script src='https://code.jquery.com/jquery-3.7.0.min.js' crossorigin='anonymous'></script>
+
+<!-- 로컬 CSS -->
+<!-- <link rel='stylesheet' href='./css/style.css'/> -->
+<!-- <link rel='stylesheet' href='./css/style1.css'/> -->
+<link rel='stylesheet' href='./css/style2.css'/>
+
+<!-- 로컬 js -->
+<script type="module" src='./js/script.js' defer></script>
+<script src='./js/data.js' defer></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
+</head>
+<body>
+<!-- 시각장애인 웹 접근성을 위한 skip _ 지우지않아도 됩니다. -->
+
+<ul id='skip'>
+   <li><a href='#header'>헤더 바로가기</a></li>
+   <li><a href='#nav'>메뉴 바로가기</a></li>
+   <li><a href='#content'>내용 바로가기</a></li>
+   <li><a href='#footer'>하단 바로가기</a></li>
+</ul>
+
+<!-- 공백을 위한 공간입니다. -->
+<div id="wrap">
+    
+    <div class="mobileHeader">
+        <div class="mobileHeadBanner">
+           <div class="textGroup">
+                <p>Bring your appetite and Taste the City with The Hoxton hotels.</p>
+                <span>VIEW OFFER</span>
+           </div>
+           <div class="textGroup">
+                <p>Give your pals a great feeling with 15% off their first Hox stay.</p>
+                <span>INVITE NOW</span>
+           </div>
+           <div class="textGroup">
+                <p>Give the gift of a stay at The Hoxton — the perfect present all year round.</p>
+                <span>SHOP GIFT CARDS</span>
+           </div>
+        </div>
+        <div class="mobileNav">
+            <div class="moNavMenuBar">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <h1 class="moLogo">
+                <a href="index.html"> <svg role="img" aria-label="The Hoxton Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 28" width="160" height="28"><title>The Hoxton Logo</title><path fill="#353535" d="m28.7 25.2c0 0.9 0.8 1.3 1.1 1.4 0.7 0.1 0.8 0.1 0.8 0.1v0.3h-8.9v-0.3c0.5-0.1 1.7-0.4 1.8-1.4v-8.9c0-1.6-0.5-2.8-1.8-3.3-1.3-0.6-2.5-0.4-4 0.6h-0.2v11.4c0 1.4 1 1.5 1.7 1.6v0.3h-8.8v-0.3c0.6-0.1 1.9-0.4 1.9-1.6v-19.1c-0.1-1.8-0.4-2.2-2.1-2.6l-0.2-0.6c1.6-0.3 7.8-1.9 7.8-1.9v11.4l1.5-1c2-1.2 3.9-1.6 5.8-1.2 2.1 0.5 3.3 2 3.5 4.2zm-19.2-0.8c0 0-0.9 0.8-1.9 0.8-1.4 0-2-0.8-2-2v-11.3h3.9v-1.6h-3.9v-5.9h-0.7l-4.7 3.6v15.9c0 0.1 0 0.6 0.2 1 0.3 1 1.4 2.5 3.9 2.4 4.1 0 5.7-2.4 5.7-2.4zm37.2-0.8c-2.3 3.2-5.7 4.5-9.8 3.6-3.1-0.8-5.2-2.5-6.1-5.6-0.9-3.1-0.3-6.1 1.3-8.5 1.2-1.6 3.2-3.5 7.1-3.5 0.9 0 4 0 6 2.3 1 1.3 1.8 2.7 2 4.6q-2.8 0.8-5.3 1.5c-1.7 0.5-5.3 1.6-5.3 1.6 0 0 0.2 3.4 3.4 4.7 2.1 0.9 4.4 0.2 6.1-1.2zm-10.4-5.7c0.3-0.1 2.9-0.8 3.6-1 1.3-0.4 1.7-0.8 1.7-2.1 0.1-1.6-0.4-2.8-1.4-3.1-0.4-0.2-1-0.2-1.5-0.2-0.8 0.2-1.4 0.8-1.9 1.7-0.5 1.3-0.7 2.7-0.5 4.7zm121 6.7v-9.5c0-1.8-0.9-3.4-2.2-4.5-1.1-0.8-3-1.1-4.4-0.7-2.3 0.6-4.5 2.3-4.5 2.3l-0.9-2.1-6.1 1.8 0.2 0.7c1 0.2 1.6 1.1 1.8 2.1v9.9c0 1.2-1.1 1.8-1.8 2v0.2h8.6v-0.1c-0.8-0.1-1.6-0.7-1.6-1.9v-10.8c0 0 2-1.7 3.8-1.1 1.5 0.5 1.9 1.8 2 3.2v8.8c0 1.1-1 1.7-1.8 1.9v0.3h8.7v-0.4c-0.9-0.3-1.8-0.7-1.8-2.1zm-48.9 1.2l-11.4-15.5h-6.4v0.2c0.3 0 0.5 0.3 0.8 0.4l0.5 0.5 11.3 15.4h6.3v-0.1c-0.5 0-1.1-0.9-1.1-0.9zm-5.1-10.8c-0.4 0.6-0.8 1.1-0.8 1.1l0.6 0.8 0.5-0.5c1.7-1.8 6.1-6 6.1-6h-6.5l0.1 0.1c0.9 1.2 0.9 3.1 0 4.5zm-6.5 7.2c0.4-0.5 0.7-1 0.8-1.1l-0.5-0.8-0.5 0.5c-1.8 1.8-6.1 6-6.1 6h6.5l-0.2-0.1c-0.9-1.2-0.7-3.1 0-4.5zm29.5-11.8c2.2-0.8 4.4-0.9 6.7-0.4 3.6 0.9 6.5 4.8 5.9 9.8-0.7 5.4-4.4 7.9-9.7 7.6-1.4 0-4-0.3-5.8-2.1-2.2-2.2-3.5-5-2.4-9.1 1-4.7 5.3-5.8 5.3-5.8zm-0.4 8.8c0.1 0.7 0.3 1.5 0.4 2.1 0.4 1.4 0.8 2.8 1.8 4 0.6 0.7 1.5 1.1 2.4 1h0.2c1.2-0.1 2.1-0.8 2.6-2.2 0.2-0.5 0.4-1 0.5-1.6 0.2-1.3 0.2-2.7 0.1-4.1 0 0-0.2-1.9-0.4-2.4-0.3-1.4-0.7-2.8-1.7-3.8-0.7-0.8-1.6-1-2.5-1h-0.1c-1.1 0.1-2 0.7-2.5 2-0.3 0.5-0.4 1-0.5 1.6-0.3 1.3-0.3 2.7-0.2 4.1zm-46.9-8.8c2.1-0.7 4.4-0.9 6.7-0.3 3.5 0.8 6.5 4.8 5.8 9.8-0.6 5.3-4.3 7.8-9.6 7.6-1.4 0-4.1-0.4-5.9-2.2-2.1-2.1-3.4-4.9-2.4-9 0.9-4.7 5.4-5.9 5.4-5.9zm-0.4 8.8c0.1 0.8 0.2 1.5 0.4 2.2 0.3 1.4 0.7 2.8 1.7 3.9 0.7 0.8 1.6 1.2 2.4 1h0.3c1.1-0.1 2-0.7 2.5-2.1 0.3-0.5 0.4-1 0.5-1.7 0.3-1.2 0.3-2.6 0.2-4 0 0-0.3-2-0.4-2.5-0.4-1.4-0.8-2.8-1.8-3.8-0.6-0.7-1.5-1-2.4-1h-0.1c-1.2 0.1-2.1 0.8-2.6 2-0.2 0.5-0.3 1.1-0.5 1.7-0.2 1.3-0.2 2.7-0.1 4.1zm41.8 5.2c0 0-0.9 0.7-1.9 0.7-1.4 0-2.1-0.7-2.1-1.9v-11.3h4v-1.6h-4v-5.9h-0.6l-4.6 3.6v15.9c0 0.1 0 0.6 0.2 1 0.3 1 1.4 2.5 3.9 2.4 4.1 0 5.7-2.4 5.7-2.4zm-49.1-10.2c-0.2-2.2-1.4-3.7-3.5-4.2-1.9-0.5-3.8-0.1-5.8 1.3l-1.5 1v-11.5c0 0-6.2 1.6-7.5 2l0.1 0.6c1.8 0.5 2 0.8 2.2 2.5v19.1c0 1.3-1.3 1.6-1.9 1.7v0.2h8.7v-0.2c-0.5-0.1-1.6-0.3-1.6-1.7v-11.3h0.1c1.4-1.1 2.8-1.3 4.1-0.6 1.2 0.6 1.7 1.6 1.7 3.3v8.9c-0.1 1.1-1.2 1.3-1.7 1.4v0.2h8.9v-0.2c0 0-0.2 0-0.8-0.1-0.5-0.2-1.1-0.4-1.1-1.4z"></path></svg> </a>
+            </h1>
+            <div class="moRoom">
+                <a href="#">FIND A ROOM</a>
+            </div>
+        </div>
+    </div>
+    <div class="mobileMenu">
+        <div class="moMenuWrap">
+            <div class="moLocation">
+                <span>SELECT LOCATION</span>
+                <ul>
+                    <li>
+                        <a href="#">Europe</a>
+                        <ul>
+                            <li><a href="#">Amsterdam, Lloyd (Eastern Docklands)</a></li>
+                            <li><a href="#">Amsterdam, Herengracht (Central)</a></li>
+                            <li><a href="#">Barcelona, Poblenou</a></li>
+                            <li><a href="#">Berlin, Charlottenburg</a></li>
+                            <li><a href="#">Brussels</a></li>
+                            <li><a href="#">Florence</a></li>
+                            <li><a href="#">Paris</a></li>
+                            <li><a href="#">Rome</a></li>
+                            <li><a href="#">Vienna</a></li>
+                            <li><a href="#">View all Europe properties</a></li>
+                            <li><a href="#">View all Amsterdam properties</a></li>
+                            <li><a href="#">View all Italy properties</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">UK & Ireland</a>
+                        <ul>
+                            <li><a href="#">London, Holborn</a></li>
+                            <li><a href="#">London, Shepherd's Bush</a></li>
+                            <li><a href="#">London, Shoreditch</a></li>
+                            <li><a href="#">London, Southwark</a></li>
+                            <li><a href="#">Edinburgh</a></li>
+                            <li><a href="#">Dublin (Now open)</a></li>
+                            <li><a href="#">View all UK & Ireland properties</a></li>
+                            <li><a href="#">View all London properties</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">USA</a>
+                        <ul>
+                            <li><a href="#">Chicago, Fulton Market</a></li>
+                            <li><a href="#">Los Angeles, Downtown</a></li>
+                            <li><a href="#">New York, Williamsburg</a></li>
+                            <li><a href="#">Portland, Oregon</a></li>
+                            <li><a href="#">View all USA properties</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Romantic Getaways</a>
+                        <ul>
+                            <li><a href="#">Edinburgh</a></li>
+                            <li><a href="#">Florence</a></li>
+                            <li><a href="#">Paris</a></li>
+                            <li><a href="#">Rome</a></li>
+                            <li><a href="#">Vienna</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Taste the City</a></li>
+                    <li><a href="#">See all Hotels</a></li>
+                </ul>
+            </div>
+            <div class="moNav">
+                <ul>
+                    <li><a href="#">Gift Vouchers</a></li>
+                    <li><a href="#">Why Book With Us?</a></li>
+                    <li><a href="#">What’s On</a></li>
+                    <li><a href="#">Dis-loyalty</a></li>
+                    <li><a href="#">HoxShop</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="etc">
+            <div class="moLanguage">
+                <span>English</span>
+                <div class="molanguageList">
+                    <ul>
+                        <li><a href="#">Español</a></li>
+                        <li><a href="#">Deutsch</a></li>
+                        <li><a href="#">Français</a></li>
+                        <li><a href="#">Nederlands</a></li>
+                        <li><a href="#">Italiano</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="moOffters">
+                <span>Offers</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="headerScroll">
+        <div class="sclBanner">
+           <div class="textGroup">
+                <p>Bring your appetite and Taste the City with The Hoxton hotels.</p>
+                <span>VIEW OFFER</span>
+           </div>
+           <div class="textGroup">
+                <p>Give your pals a great feeling with 15% off their first Hox stay.</p>
+                <span>INVITE NOW</span>
+           </div>
+           <div class="textGroup">
+                <p>Give the gift of a stay at The Hoxton — the perfect present all year round.</p>
+                <span>SHOP GIFT CARDS</span>
+           </div>
+        </div>
+        <div class="scollFlex">
+            <h2>
+                <a href="#">
+                    <svg role="img" aria-label="The Hoxton Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 28" width="160" height="28"><title>The Hoxton Logo</title><path fill="#353535" d="m28.7 25.2c0 0.9 0.8 1.3 1.1 1.4 0.7 0.1 0.8 0.1 0.8 0.1v0.3h-8.9v-0.3c0.5-0.1 1.7-0.4 1.8-1.4v-8.9c0-1.6-0.5-2.8-1.8-3.3-1.3-0.6-2.5-0.4-4 0.6h-0.2v11.4c0 1.4 1 1.5 1.7 1.6v0.3h-8.8v-0.3c0.6-0.1 1.9-0.4 1.9-1.6v-19.1c-0.1-1.8-0.4-2.2-2.1-2.6l-0.2-0.6c1.6-0.3 7.8-1.9 7.8-1.9v11.4l1.5-1c2-1.2 3.9-1.6 5.8-1.2 2.1 0.5 3.3 2 3.5 4.2zm-19.2-0.8c0 0-0.9 0.8-1.9 0.8-1.4 0-2-0.8-2-2v-11.3h3.9v-1.6h-3.9v-5.9h-0.7l-4.7 3.6v15.9c0 0.1 0 0.6 0.2 1 0.3 1 1.4 2.5 3.9 2.4 4.1 0 5.7-2.4 5.7-2.4zm37.2-0.8c-2.3 3.2-5.7 4.5-9.8 3.6-3.1-0.8-5.2-2.5-6.1-5.6-0.9-3.1-0.3-6.1 1.3-8.5 1.2-1.6 3.2-3.5 7.1-3.5 0.9 0 4 0 6 2.3 1 1.3 1.8 2.7 2 4.6q-2.8 0.8-5.3 1.5c-1.7 0.5-5.3 1.6-5.3 1.6 0 0 0.2 3.4 3.4 4.7 2.1 0.9 4.4 0.2 6.1-1.2zm-10.4-5.7c0.3-0.1 2.9-0.8 3.6-1 1.3-0.4 1.7-0.8 1.7-2.1 0.1-1.6-0.4-2.8-1.4-3.1-0.4-0.2-1-0.2-1.5-0.2-0.8 0.2-1.4 0.8-1.9 1.7-0.5 1.3-0.7 2.7-0.5 4.7zm121 6.7v-9.5c0-1.8-0.9-3.4-2.2-4.5-1.1-0.8-3-1.1-4.4-0.7-2.3 0.6-4.5 2.3-4.5 2.3l-0.9-2.1-6.1 1.8 0.2 0.7c1 0.2 1.6 1.1 1.8 2.1v9.9c0 1.2-1.1 1.8-1.8 2v0.2h8.6v-0.1c-0.8-0.1-1.6-0.7-1.6-1.9v-10.8c0 0 2-1.7 3.8-1.1 1.5 0.5 1.9 1.8 2 3.2v8.8c0 1.1-1 1.7-1.8 1.9v0.3h8.7v-0.4c-0.9-0.3-1.8-0.7-1.8-2.1zm-48.9 1.2l-11.4-15.5h-6.4v0.2c0.3 0 0.5 0.3 0.8 0.4l0.5 0.5 11.3 15.4h6.3v-0.1c-0.5 0-1.1-0.9-1.1-0.9zm-5.1-10.8c-0.4 0.6-0.8 1.1-0.8 1.1l0.6 0.8 0.5-0.5c1.7-1.8 6.1-6 6.1-6h-6.5l0.1 0.1c0.9 1.2 0.9 3.1 0 4.5zm-6.5 7.2c0.4-0.5 0.7-1 0.8-1.1l-0.5-0.8-0.5 0.5c-1.8 1.8-6.1 6-6.1 6h6.5l-0.2-0.1c-0.9-1.2-0.7-3.1 0-4.5zm29.5-11.8c2.2-0.8 4.4-0.9 6.7-0.4 3.6 0.9 6.5 4.8 5.9 9.8-0.7 5.4-4.4 7.9-9.7 7.6-1.4 0-4-0.3-5.8-2.1-2.2-2.2-3.5-5-2.4-9.1 1-4.7 5.3-5.8 5.3-5.8zm-0.4 8.8c0.1 0.7 0.3 1.5 0.4 2.1 0.4 1.4 0.8 2.8 1.8 4 0.6 0.7 1.5 1.1 2.4 1h0.2c1.2-0.1 2.1-0.8 2.6-2.2 0.2-0.5 0.4-1 0.5-1.6 0.2-1.3 0.2-2.7 0.1-4.1 0 0-0.2-1.9-0.4-2.4-0.3-1.4-0.7-2.8-1.7-3.8-0.7-0.8-1.6-1-2.5-1h-0.1c-1.1 0.1-2 0.7-2.5 2-0.3 0.5-0.4 1-0.5 1.6-0.3 1.3-0.3 2.7-0.2 4.1zm-46.9-8.8c2.1-0.7 4.4-0.9 6.7-0.3 3.5 0.8 6.5 4.8 5.8 9.8-0.6 5.3-4.3 7.8-9.6 7.6-1.4 0-4.1-0.4-5.9-2.2-2.1-2.1-3.4-4.9-2.4-9 0.9-4.7 5.4-5.9 5.4-5.9zm-0.4 8.8c0.1 0.8 0.2 1.5 0.4 2.2 0.3 1.4 0.7 2.8 1.7 3.9 0.7 0.8 1.6 1.2 2.4 1h0.3c1.1-0.1 2-0.7 2.5-2.1 0.3-0.5 0.4-1 0.5-1.7 0.3-1.2 0.3-2.6 0.2-4 0 0-0.3-2-0.4-2.5-0.4-1.4-0.8-2.8-1.8-3.8-0.6-0.7-1.5-1-2.4-1h-0.1c-1.2 0.1-2.1 0.8-2.6 2-0.2 0.5-0.3 1.1-0.5 1.7-0.2 1.3-0.2 2.7-0.1 4.1zm41.8 5.2c0 0-0.9 0.7-1.9 0.7-1.4 0-2.1-0.7-2.1-1.9v-11.3h4v-1.6h-4v-5.9h-0.6l-4.6 3.6v15.9c0 0.1 0 0.6 0.2 1 0.3 1 1.4 2.5 3.9 2.4 4.1 0 5.7-2.4 5.7-2.4zm-49.1-10.2c-0.2-2.2-1.4-3.7-3.5-4.2-1.9-0.5-3.8-0.1-5.8 1.3l-1.5 1v-11.5c0 0-6.2 1.6-7.5 2l0.1 0.6c1.8 0.5 2 0.8 2.2 2.5v19.1c0 1.3-1.3 1.6-1.9 1.7v0.2h8.7v-0.2c-0.5-0.1-1.6-0.3-1.6-1.7v-11.3h0.1c1.4-1.1 2.8-1.3 4.1-0.6 1.2 0.6 1.7 1.6 1.7 3.3v8.9c-0.1 1.1-1.2 1.3-1.7 1.4v0.2h8.9v-0.2c0 0-0.2 0-0.8-0.1-0.5-0.2-1.1-0.4-1.1-1.4z"></path></svg>
+                </a>
+            </h2>
+            <div class="sclLocation"><span>Select Location</span></div>
+            <div class="sclFInd"><span>FIND A ROOM</span></div>
+        </div>
+        <div class="locationWrap">
+            <div class="locationList">
+                <ul>
+                    <li><a href="#">Europe</a>
+                        <div class="locationDetail locationDetail1">
+                            <ul>
+                                <li><a href="#">Amsterdam, Lloyd (Eastern Docklands)</a></li>
+                                <li><a href="#">Amsterdam, Herengracht (Central)</a></li>
+                                <li><a href="#">Barcelona, Poblenou</a></li>
+                                <li><a href="#">Berlin, Charlottenburg</a></li>
+                                <li><a href="#">Brussels</a></li>
+                                <li><a href="#">Florence</a></li>
+                                <li><a href="#">Paris</a></li>
+                                <li><a href="#">Rome</a></li>
+                                <li><a href="#">Vienna</a></li>
+                                <li><a href="#">View all Europe properties</a></li>
+                                <li><a href="#">View all Amsterdam properties</a></li>
+                                <li><a href="#">View all italy properties</a></li>
+                            </ul>
+                        </div>
+                        <div class="locationImg locationImg1">
+                            <img src="./img/Hox-eurostar-landing-page-amsterdam.jpg" alt="LloydImg">
+                            <img src="./img/lobby-heregracht-ams.jpg" alt="HerengrachtImg">
+                            <img src="./img/Barcelona-pool-view.jpg" alt="PoblenouImg">
+                            <img src="./img/TH-Nav-Berlin-nav-page-hero (2).jpg" alt="CharlottenburgImg">
+                            <img src="./img/Hox-brussels-navigation-lobby-2000x1333-1.jpg" alt="BrusselsImg">
+                            <img src="./img/TH-Florence-landingpage-hero-noone.jpg" alt="FlorenceImg">
+                            <img src="./img/Hox-eurostar-landing-page-paris.jpg" alt="ParisImg">
+                            <img src="./img/rome-terrace.jpg" alt="RomeImg">
+                            <img src="./img/Hoxton_Vienna_Pool_lookaround.jpg" alt="ViennaImg">
+                            <img src="./img/amsterdam-hero-edit.jpg" alt="all Europe Img">
+                            <img src="./img/ams-city-nav.jpg" alt="all Amsterdam Img">
+                            <img src="./img/hoxton-florence-neighbourhood-hero.jpg" alt="all italy Img">
+                        </div>
+                    </li>
+                    <li><a href="#">UK & Ireland</a>
+                        <div class="locationDetail locationDetail2">
+                            <ul>
+                                <li><a href="#">London, Holborn</a></li>
+                                <li><a href="#">London, Shepherd's Bush</a></li>
+                                <li><a href="#">London, Shoreditch</a></li>
+                                <li><a href="#">London, Southwark</a></li>
+                                <li><a href="#">Edinburgh</a></li>
+                                <li><a href="#">Dublin (Now open)</a></li>
+                                <li><a href="#">View all UK & Ireland properties</a></li>
+                                <li><a href="#">View all London properties</a></li>
+                            </ul>
+                        </div>
+                        <div class="locationImg locationImg2">
+                            <img src="./img/TheHoxtonHolborn_day1_2_026Hero_V2-RESIZED.jpg" alt="HolbornImg">
+                            <img src="./img/shebu-lobby.jpg" alt="Shepherd'sBushImg">
+                            <img src="./img/shoreditch-hotel-lobby.jpg" alt="ShoreditchImg">
+                            <img src="./img/Hoxton-Southwark-Lobby-Hero-1345_RET.jpg" alt="SouthwarkImg">
+                            <img src="./img/TH-edinburgh-me-hero-1000x1000-1.jpg" alt="EdinburghImg">
+                            <img src="./img/dublin-hero.jpg" alt="DublinImg">
+                            <img src="./img/Hoxton-London-shoreditch-carousel-1500x1000-4.jpg" alt="all UK & Ireland Img">
+                            <img src="./img/TH-london-lama-inn-terrace-1200x1400-1.jpg" alt="all London Img">
+                        </div>
+                    </li>
+                    <li><a href="#">USA</a>
+                        <div class="locationDetail locationDetail3">
+                            <ul>
+                                <li><a href="#">Chicago, Fulton Market</a></li>
+                                <li><a href="#">Los Angeles, Downtown</a></li>
+                                <li><a href="#">New York, Williamsburg</a></li>
+                                <li><a href="#">Portland, Oregon</a></li>
+                                <li><a href="#">View all USA properties</a></li>
+                            </ul>
+                        </div>
+                        <div class="locationImg locationImg3">
+                            <img src="./img/200114_Hoxotn_Chicago_16382_v2-edit.jpg" alt="FultonMarketImg">
+                            <img src="./img/TH-Room-DowntownLA-Cosy.jpg" alt="DowntownImg">
+                            <img src="./img/THW_Lobby_1-e1748939796258.jpg" alt="WilliamsburgImg">
+                            <img src="./img/TH-Room-Portland-cosy-new-1.jpg" alt="OregonImg">
+                            <img src="./img/200114_Hoxotn_Chicago_16262v3-edit-e1748603153220.jpg" alt="all USA Img">
+                        </div>
+                    </li>
+                    <li><a href="#">Romantic Getaways</a>
+                        <div class="locationDetail locationDetail4">
+                            <ul>
+                                <li><a href="#">Edinburgh</a></li>
+                                <li><a href="#">Florence</a></li>
+                                <li><a href="#">Paris</a></li>
+                                <li><a href="#">Rome</a></li>
+                                <li><a href="#">Vienna</a></li>
+                            </ul>
+                        </div>
+                        <div class="locationImg locationImg4">
+                            <img src="./img/TH-edinburgh-me-hero-1000x1000-1.jpg" alt="EdinburghImg">
+                            <img src="./img/TH-Florence-landingpage-hero-noone.jpg" alt="FlorenceImg">
+                            <img src="./img/Hox-eurostar-landing-page-paris.jpg" alt="ParisImg">
+                            <img src="./img/rome-terrace.jpg" alt="RomeImg">
+                            <img src="./img/Hoxton_Vienna_Pool_lookaround.jpg" alt="ViennaImg">
+                        </div>
+                    </li>
+                    <li class="taste">
+                        <a href="#">Taste the City</a>
+                        <div class="locationImg locationImg5">
+                            <img src="./img/TTC-3.jpg" alt="Taste the City Img">
+                        </div>
+                    </li>
+                    <li class="allHotel">
+                        <a href="#">See all Hotels</a>
+                        <div class="locationImg locationImg6">
+                            <img src="./img/See-all-hotels.jpg" alt="See all Hotels Img">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="roomWrap">
+            <div class="bookingCLosepannel"></div>
+            <div class="bookingWrap">
+                <div class="bookingTop">
+                    <span>MAKE A BOOKING</span>
+                    <button class="bookingClose"></button>
+                </div>
+                <div class="bookingTabs">
+                    <ul>
+                        <li class="roomActive"><a href="#">BedRooms</a></li>
+                        <li><a href="#">Meeting Rooms</a></li>
+                        <li><a href="#">Restaurants</a></li>
+                    </ul>
+                </div>
+                <div class="tabContents">
+                    <div class="bedRooms">
+                        <div class="bedLocation">
+                            <label for="bookingSelect">location</label>
+                            <select name="LOCATION" id="bookingSelect">
+                                <option disabled selected value>Find Location</option>
+                                <option value="">Amsterdam, Herengracht</option>
+                                <option value="">Amsterdam, Lloyd</option>
+                                <option value="">Barcelona, Poblenou</option>
+                                <option value="">Berlin, Charlottenburg</option>
+                                <option value="">Brussels</option>
+                                <option value="">Chicago, Fulton Market</option>
+                                <option value="">Dublin</option>
+                                <option value="">Edinburgh</option>
+                                <option value="">Florence, Italy</option>
+                                <option value="">London, Holborn</option>
+                                <option value="">London, Shepherd’s Bush</option>
+                                <option value="">London, Shoreditch</option>
+                                <option value="">London, Southwark</option>
+                                <option value="">Los Angeles, Downtown</option>
+                                <option value="">New York, Williamsburg</option>
+                                <option value="">Paris</option>
+                                <option value="">Portland, Oregon</option>
+                                <option value="">Rome, Italy</option>
+                                <option value="">Vienna</option>
+                            </select>
+                            <div class="calendar">
+                                <label for="calendarlabel">check in / check out</label>
+                                <input type="text" id="checkDate" placeholder="Add Dates" readonly class="flatpickr-input">
+                            </div>
+                            <div class="roomNum">
+                                <label for="roomSelect">rooms</label>
+                                <select name="roomNums" id="roomSelect">
+                                    <option value="1">1 Room</option>
+                                    <option value="2">2 Rooms</option>
+                                    <option value="3">3 Rooms</option>
+                                    <option value="4">4 Rooms</option>
+                                </select>
+                            </div>
+                            <div class="guest">
+                                <span>ROOM1</span>
+                                <div class="adults">
+                                    <span>Adults</span>
+                                    <div class="stepper">
+                                        <button type="button" class="minus">-</button>
+                                        <input type="number"  min="1" value="2" max="4" readonly/>
+                                        <button type="button" class="plus">+</button>
+                                    </div>
+                                </div>
+                                <div class="child">
+                                    <span>Children <span>(1 ~ 17)</span></span>
+                                    <div class="stepper">
+                                        <button type="button" class="minus">-</button>
+                                        <input type="number"  min="0" value="0" max="3" readonly/>
+                                        <button type="button" class="plus">+</button>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="code">
+                                <label for="codeNum">got a code?</label>
+                                <input type="text" placeholder="Enter code">
+                            </div>
+                        </div>
+                        <button class="bookingBtn">Check Availability</button>
+                    </div>
+                    <div class="meetingRooms">
+                        <div class="meetingLocation">
+                            <label for="meetingSelect" disabled selected>location*</label>
+                            <select name="meeting" id="meetingSelect" title="LOCATION">
+                                <option disabled selected value>Please Select</option>
+                                <option value="">2NW5, Portland</option>
+                                <option value="">Alassio, Florence</option>
+                                <option value="">Albie, London</option>
+                                <option value="">Breman Brasserie, Amsterdam</option>
+                                <option value="">Bouvier, Vienna</option>
+                                <option value="">Cabra Cevicheria, Chicago</option>
+                                <option value="">Cantina Valentina, Brussels</option>
+                                <option value="">Cantina Valentina, Dublin</option>
+                                <option value="">Cayo Coco</option>
+                                <option value="">Chet's, London</option>
+                                <option value="">Cira, Chicago</option>
+                                <option value="">Cugino, Rome</option>
+                                <option value="">Elio, Rome</option>
+                                <option value="">Enoteca Violetta, Florence</option>
+                                <option value="">Four Corners, Barcelona</option>
+                                <option value="">House of Tandoor, Berlin</option>
+                                <option value="">Jacques' Bar, Paris</option>
+                                <option value="">Jaffa Cocktail and Raw Bar, Williamsburg NYC</option>
+                                <option value="">K'Far, Williamsburg NYC</option>
+                                <option value="">Laser Wolf, Williamsburg</option>
+                                <option value="">Lazy Bird, Chicago</option>
+                                <option value="">Llama Inn, London</option>
+                                <option value="">Lotti's, Amsterdam</option>
+                                <option value="">Lovely Rita, Portland</option>
+                                <option value="">Moonlark's Dinette, Downtown LA</option>
+                                <option value="">Patatino, Edinburgh</option>
+                                <option value="">Planche, Paris</option>
+                                <option value="">Rivié, Paris</option>
+                                <option value="">Rondo, London</option>
+                                <option value="">Seabird, London</option>
+                                <option value="">Tope, Brussels</option>
+                                <option value="">Tope, Barcelona</option>
+                                <option value="">Tope, Portland</option>
+                            </select>
+                        </div>
+                        <span>Looking to book a space? Send us your request below.</span>
+                        <button class="bookingBtn">Make Enquiry</button>
+                    </div>
+                    <div class="restaurants">
+                        <div class="resLocation">
+                            <label for="resLocation" disabled selected>location*</label>
+                            <select name="restaurant" id="resLocation" title="LOCATION">
+                                <option disabled selected value>Please Select</option>
+                                <option value="">Amsterdam, Herengracht</option>
+                                <option value="">Amsterdam, Lloyd</option>
+                                <option value="">Barcelona, Poblenou</option>
+                                <option value="">Brussels</option>
+                                <option value="">Berlin, Charlottenburg</option>
+                                <option value="">Chicago, Fulton Market</option>
+                                <option value="">London, Holborn</option>
+                                <option value="">London, Shepherd's Bush</option>
+                                <option value="">London, Shoreditch</option>
+                                <option value="">London, Southwark</option>
+                                <option value="">Los Angeles, Downtown</option>
+                                <option value="">New York, Williamsburg</option>
+                                <option value="">Paris</option>
+                                <option value="">Portland, Oregon</option>
+                                <option value="">Rome</option>
+                                <option value="">Vienna</option>
+                            </select>
+                        </div>
+                        <div class="calendar resCal">
+                            <label for="resCheckDate">date*</label>
+                            <input type="text" id="resCheckDate" placeholder="Add Dates" readonly class="flatpickr-input">
+                        </div>
+                        <div class="resTime">
+                            <label for="resSelect" disabled>location*</label>
+                            <select name="resTimeSelc" id="resSelect">
+                                <option value="">12:00 am</option>
+                                <option value="">12:30 am</option>
+                                <option value="">1:00 am</option>
+                                <option value="">1:30 am</option>
+                                <option value="">2:00 am</option>
+                                <option value="">2:30 am</option>
+                                <option value="">3:00 am</option>
+                                <option value="">3:30 am</option>
+                                <option value="">4:00 am</option>
+                                <option value="">4:30 am</option>
+                                <option value="">5:00 am</option>
+                                <option value="">5:30 am</option>
+                                <option value="">6:00 am</option>
+                                <option value="">6:30 am</option>
+                                <option value="">7:00 am</option>
+                                <option value="">7:30 am</option>
+                                <option value="">8:00 am</option>
+                                <option value="">8:30 am</option>
+                                <option value="">9:00 am</option>
+                                <option value="">9:30 am</option>
+                                <option value="">10:00 am</option>
+                                <option value="">10:30 am</option>
+                                <option value="">11:00 am</option>
+                                <option value="">11:30 am</option>
+                                <option value="">12:00 am</option>
+                                <option value="">12:30 am</option>
+                                <option value="">1:00 pm</option>
+                                <option value="">1:30 pm</option>
+                                <option value="">2:00 pm</option>
+                                <option value="">2:30 pm</option>
+                                <option value="">3:00 pm</option>
+                                <option value="">3:30 pm</option>
+                                <option value="">4:00 pm</option>
+                                <option value="">4:30 pm</option>
+                                <option value="">5:00 pm</option>
+                                <option value="">5:30 pm</option>
+                                <option value="">6:00 pm</option>
+                                <option value="">6:30 pm</option>
+                                <option value="">7:00 pm</option>
+                                <option value="">7:30 pm</option>
+                                <option value="" selected>8:00 pm</option>
+                                <option value="">8:30 pm</option>
+                                <option value="">9:00 pm</option>
+                                <option value="">9:30 pm</option>
+                                <option value="">10:00 pm</option>
+                                <option value="">10:30 pm</option>
+                                <option value="">11:00 pm</option>
+                                <option value="">11:30 pm</option>
+                            </select>
+                        </div>
+                        <div class="resGuest">
+                            <label for="resguests">guests*</label>
+                            <select name="resNum" id="resguests">
+                                <option value="1">1</option>
+                                <option value="2" selected>2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                            </select>
+                        </div>
+                        <button class="bookingDisactive">Check Availability</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div> -->
+    
+    <header id="header">
+        <div class="headBanner">
+           <div class="textGroup">
+                <p>Bring your appetite and Taste the City with The Hoxton hotels.</p>
+                <span>VIEW OFFER</span>
+           </div>
+           <div class="textGroup">
+                <p>Give your pals a great feeling with 15% off their first Hox stay.</p>
+                <span>INVITE NOW</span>
+           </div>
+           <div class="textGroup">
+                <p>Give the gift of a stay at The Hoxton — the perfect present all year round.</p>
+                <span>SHOP GIFT CARDS</span>
+           </div>
+        </div>
+        <div class="mainHeader">
+            <h1 class="logo">
+                <a href="index.html">
+                    <svg role="img" aria-label="The Hoxton Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 28" width="160" height="28">
+                        <title>The Hoxton Logo</title>
+                        <path fill="#353535" d="m28.7 25.2c0 0.9 0.8 1.3 1.1 1.4 0.7 0.1 0.8 0.1 0.8 0.1v0.3h-8.9v-0.3c0.5-0.1 1.7-0.4 1.8-1.4v-8.9c0-1.6-0.5-2.8-1.8-3.3-1.3-0.6-2.5-0.4-4 0.6h-0.2v11.4c0 1.4 1 1.5 1.7 1.6v0.3h-8.8v-0.3c0.6-0.1 1.9-0.4 1.9-1.6v-19.1c-0.1-1.8-0.4-2.2-2.1-2.6l-0.2-0.6c1.6-0.3 7.8-1.9 7.8-1.9v11.4l1.5-1c2-1.2 3.9-1.6 5.8-1.2 2.1 0.5 3.3 2 3.5 4.2zm-19.2-0.8c0 0-0.9 0.8-1.9 0.8-1.4 0-2-0.8-2-2v-11.3h3.9v-1.6h-3.9v-5.9h-0.7l-4.7 3.6v15.9c0 0.1 0 0.6 0.2 1 0.3 1 1.4 2.5 3.9 2.4 4.1 0 5.7-2.4 5.7-2.4zm37.2-0.8c-2.3 3.2-5.7 4.5-9.8 3.6-3.1-0.8-5.2-2.5-6.1-5.6-0.9-3.1-0.3-6.1 1.3-8.5 1.2-1.6 3.2-3.5 7.1-3.5 0.9 0 4 0 6 2.3 1 1.3 1.8 2.7 2 4.6q-2.8 0.8-5.3 1.5c-1.7 0.5-5.3 1.6-5.3 1.6 0 0 0.2 3.4 3.4 4.7 2.1 0.9 4.4 0.2 6.1-1.2zm-10.4-5.7c0.3-0.1 2.9-0.8 3.6-1 1.3-0.4 1.7-0.8 1.7-2.1 0.1-1.6-0.4-2.8-1.4-3.1-0.4-0.2-1-0.2-1.5-0.2-0.8 0.2-1.4 0.8-1.9 1.7-0.5 1.3-0.7 2.7-0.5 4.7zm121 6.7v-9.5c0-1.8-0.9-3.4-2.2-4.5-1.1-0.8-3-1.1-4.4-0.7-2.3 0.6-4.5 2.3-4.5 2.3l-0.9-2.1-6.1 1.8 0.2 0.7c1 0.2 1.6 1.1 1.8 2.1v9.9c0 1.2-1.1 1.8-1.8 2v0.2h8.6v-0.1c-0.8-0.1-1.6-0.7-1.6-1.9v-10.8c0 0 2-1.7 3.8-1.1 1.5 0.5 1.9 1.8 2 3.2v8.8c0 1.1-1 1.7-1.8 1.9v0.3h8.7v-0.4c-0.9-0.3-1.8-0.7-1.8-2.1zm-48.9 1.2l-11.4-15.5h-6.4v0.2c0.3 0 0.5 0.3 0.8 0.4l0.5 0.5 11.3 15.4h6.3v-0.1c-0.5 0-1.1-0.9-1.1-0.9zm-5.1-10.8c-0.4 0.6-0.8 1.1-0.8 1.1l0.6 0.8 0.5-0.5c1.7-1.8 6.1-6 6.1-6h-6.5l0.1 0.1c0.9 1.2 0.9 3.1 0 4.5zm-6.5 7.2c0.4-0.5 0.7-1 0.8-1.1l-0.5-0.8-0.5 0.5c-1.8 1.8-6.1 6-6.1 6h6.5l-0.2-0.1c-0.9-1.2-0.7-3.1 0-4.5zm29.5-11.8c2.2-0.8 4.4-0.9 6.7-0.4 3.6 0.9 6.5 4.8 5.9 9.8-0.7 5.4-4.4 7.9-9.7 7.6-1.4 0-4-0.3-5.8-2.1-2.2-2.2-3.5-5-2.4-9.1 1-4.7 5.3-5.8 5.3-5.8zm-0.4 8.8c0.1 0.7 0.3 1.5 0.4 2.1 0.4 1.4 0.8 2.8 1.8 4 0.6 0.7 1.5 1.1 2.4 1h0.2c1.2-0.1 2.1-0.8 2.6-2.2 0.2-0.5 0.4-1 0.5-1.6 0.2-1.3 0.2-2.7 0.1-4.1 0 0-0.2-1.9-0.4-2.4-0.3-1.4-0.7-2.8-1.7-3.8-0.7-0.8-1.6-1-2.5-1h-0.1c-1.1 0.1-2 0.7-2.5 2-0.3 0.5-0.4 1-0.5 1.6-0.3 1.3-0.3 2.7-0.2 4.1zm-46.9-8.8c2.1-0.7 4.4-0.9 6.7-0.3 3.5 0.8 6.5 4.8 5.8 9.8-0.6 5.3-4.3 7.8-9.6 7.6-1.4 0-4.1-0.4-5.9-2.2-2.1-2.1-3.4-4.9-2.4-9 0.9-4.7 5.4-5.9 5.4-5.9zm-0.4 8.8c0.1 0.8 0.2 1.5 0.4 2.2 0.3 1.4 0.7 2.8 1.7 3.9 0.7 0.8 1.6 1.2 2.4 1h0.3c1.1-0.1 2-0.7 2.5-2.1 0.3-0.5 0.4-1 0.5-1.7 0.3-1.2 0.3-2.6 0.2-4 0 0-0.3-2-0.4-2.5-0.4-1.4-0.8-2.8-1.8-3.8-0.6-0.7-1.5-1-2.4-1h-0.1c-1.2 0.1-2.1 0.8-2.6 2-0.2 0.5-0.3 1.1-0.5 1.7-0.2 1.3-0.2 2.7-0.1 4.1zm41.8 5.2c0 0-0.9 0.7-1.9 0.7-1.4 0-2.1-0.7-2.1-1.9v-11.3h4v-1.6h-4v-5.9h-0.6l-4.6 3.6v15.9c0 0.1 0 0.6 0.2 1 0.3 1 1.4 2.5 3.9 2.4 4.1 0 5.7-2.4 5.7-2.4zm-49.1-10.2c-0.2-2.2-1.4-3.7-3.5-4.2-1.9-0.5-3.8-0.1-5.8 1.3l-1.5 1v-11.5c0 0-6.2 1.6-7.5 2l0.1 0.6c1.8 0.5 2 0.8 2.2 2.5v19.1c0 1.3-1.3 1.6-1.9 1.7v0.2h8.7v-0.2c-0.5-0.1-1.6-0.3-1.6-1.7v-11.3h0.1c1.4-1.1 2.8-1.3 4.1-0.6 1.2 0.6 1.7 1.6 1.7 3.3v8.9c-0.1 1.1-1.2 1.3-1.7 1.4v0.2h8.9v-0.2c0 0-0.2 0-0.8-0.1-0.5-0.2-1.1-0.4-1.1-1.4z"></path>
+                    </svg>
+                </a>
+            </h1>
+            <div class="headerRight">
+                <nav id="nav">
+                    <ul>
+                        <li><a href="#">Global Offers</a></li>
+                        <li><a href="#">Gift Vouchers</a></li>
+                        <li><a href="#">Why Booking With Us?</a></li>
+                        <li><a href="#">What's On</a></li>
+                        <li><a href="#">Dis-loyalty</a></li>
+                        <li><a href="#">HoxShop</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li class="language">
+                            <span>English</span>
+                            <div class="languageList">
+                                <ul>
+                                    <li><a href="#">Español</a></li>
+                                    <li><a href="#">Deutsch</a></li>
+                                    <li><a href="#">Français</a></li>
+                                    <li><a href="#">Nederlands</a></li>
+                                    <li><a href="#">Italiano</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="locationRoom">
+                    <div class="location">
+                        <span>Select Location</span>
+                    </div>
+                    <div class="room">
+                        <a href="#">FIND A ROOM</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="locationWrap">
+            <div class="locationList">
+                <ul>
+                    <li><a href="#">Europe</a>
+                        <div class="locationDetail locationDetail1">
+                            <ul>
+                                <li><a href="#">Amsterdam, Lloyd (Eastern Docklands)</a></li>
+                                <li><a href="#">Amsterdam, Herengracht (Central)</a></li>
+                                <li><a href="#">Barcelona, Poblenou</a></li>
+                                <li><a href="#">Berlin, Charlottenburg</a></li>
+                                <li><a href="#">Brussels</a></li>
+                                <li><a href="#">Florence</a></li>
+                                <li><a href="#">Paris</a></li>
+                                <li><a href="#">Rome</a></li>
+                                <li><a href="#">Vienna</a></li>
+                                <li><a href="#">View all Europe properties</a></li>
+                                <li><a href="#">View all Amsterdam properties</a></li>
+                                <li><a href="#">View all italy properties</a></li>
+                            </ul>
+                        </div>
+                        <div class="locationImg locationImg1">
+                            <img src="./img/Hox-eurostar-landing-page-amsterdam.jpg" alt="LloydImg">
+                            <img src="./img/lobby-heregracht-ams.jpg" alt="HerengrachtImg">
+                            <img src="./img/Barcelona-pool-view.jpg" alt="PoblenouImg">
+                            <img src="./img/TH-Nav-Berlin-nav-page-hero (2).jpg" alt="CharlottenburgImg">
+                            <img src="./img/Hox-brussels-navigation-lobby-2000x1333-1.jpg" alt="BrusselsImg">
+                            <img src="./img/TH-Florence-landingpage-hero-noone.jpg" alt="FlorenceImg">
+                            <img src="./img/Hox-eurostar-landing-page-paris.jpg" alt="ParisImg">
+                            <img src="./img/rome-terrace.jpg" alt="RomeImg">
+                            <img src="./img/Hoxton_Vienna_Pool_lookaround.jpg" alt="ViennaImg">
+                            <img src="./img/amsterdam-hero-edit.jpg" alt="all Europe Img">
+                            <img src="./img/ams-city-nav.jpg" alt="all Amsterdam Img">
+                            <img src="./img/hoxton-florence-neighbourhood-hero.jpg" alt="all italy Img">
+                        </div>
+                    </li>
+                    <li><a href="#">UK & Ireland</a>
+                        <div class="locationDetail locationDetail2">
+                            <ul>
+                                <li><a href="#">London, Holborn</a></li>
+                                <li><a href="#">London, Shepherd's Bush</a></li>
+                                <li><a href="#">London, Shoreditch</a></li>
+                                <li><a href="#">London, Southwark</a></li>
+                                <li><a href="#">Edinburgh</a></li>
+                                <li><a href="#">Dublin (Now open)</a></li>
+                                <li><a href="#">View all UK & Ireland properties</a></li>
+                                <li><a href="#">View all London properties</a></li>
+                            </ul>
+                        </div>
+                        <div class="locationImg locationImg2">
+                            <img src="./img/TheHoxtonHolborn_day1_2_026Hero_V2-RESIZED.jpg" alt="HolbornImg">
+                            <img src="./img/shebu-lobby.jpg" alt="Shepherd'sBushImg">
+                            <img src="./img/shoreditch-hotel-lobby.jpg" alt="ShoreditchImg">
+                            <img src="./img/Hoxton-Southwark-Lobby-Hero-1345_RET.jpg" alt="SouthwarkImg">
+                            <img src="./img/TH-edinburgh-me-hero-1000x1000-1.jpg" alt="EdinburghImg">
+                            <img src="./img/dublin-hero.jpg" alt="DublinImg">
+                            <img src="./img/Hoxton-London-shoreditch-carousel-1500x1000-4.jpg" alt="all UK & Ireland Img">
+                            <img src="./img/TH-london-lama-inn-terrace-1200x1400-1.jpg" alt="all London Img">
+                        </div>
+                    </li>
+                    <li><a href="#">USA</a>
+                        <div class="locationDetail locationDetail3">
+                            <ul>
+                                <li><a href="#">Chicago, Fulton Market</a></li>
+                                <li><a href="#">Los Angeles, Downtown</a></li>
+                                <li><a href="#">New York, Williamsburg</a></li>
+                                <li><a href="#">Portland, Oregon</a></li>
+                                <li><a href="#">View all USA properties</a></li>
+                            </ul>
+                        </div>
+                        <div class="locationImg locationImg3">
+                            <img src="./img/200114_Hoxotn_Chicago_16382_v2-edit.jpg" alt="FultonMarketImg">
+                            <img src="./img/TH-Room-DowntownLA-Cosy.jpg" alt="DowntownImg">
+                            <img src="./img/THW_Lobby_1-e1748939796258.jpg" alt="WilliamsburgImg">
+                            <img src="./img/TH-Room-Portland-cosy-new-1.jpg" alt="OregonImg">
+                            <img src="./img/200114_Hoxotn_Chicago_16262v3-edit-e1748603153220.jpg" alt="all USA Img">
+                        </div>
+                    </li>
+                    <li><a href="#">Romantic Getaways</a>
+                        <div class="locationDetail locationDetail4">
+                            <ul>
+                                <li><a href="#">Edinburgh</a></li>
+                                <li><a href="#">Florence</a></li>
+                                <li><a href="#">Paris</a></li>
+                                <li><a href="#">Rome</a></li>
+                                <li><a href="#">Vienna</a></li>
+                            </ul>
+                        </div>
+                        <div class="locationImg locationImg4">
+                            <img src="./img/TH-edinburgh-me-hero-1000x1000-1.jpg" alt="EdinburghImg">
+                            <img src="./img/TH-Florence-landingpage-hero-noone.jpg" alt="FlorenceImg">
+                            <img src="./img/Hox-eurostar-landing-page-paris.jpg" alt="ParisImg">
+                            <img src="./img/rome-terrace.jpg" alt="RomeImg">
+                            <img src="./img/Hoxton_Vienna_Pool_lookaround.jpg" alt="ViennaImg">
+                        </div>
+                    </li>
+                    <li class="taste">
+                        <a href="#">Taste the City</a>
+                        <div class="locationImg locationImg5">
+                            <img src="./img/TTC-3.jpg" alt="Taste the City Img">
+                        </div>
+                    </li>
+                    <li class="allHotel">
+                        <a href="#">See all Hotels</a>
+                        <div class="locationImg locationImg6">
+                            <img src="./img/See-all-hotels.jpg" alt="See all Hotels Img">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="roomWrap">
+            <div class="bookingCLosepannel"></div>
+            <div class="bookingWrap">
+                <div class="bookingTop">
+                    <span>MAKE A BOOKING</span>
+                    <button class="bookingClose"></button>
+                </div>
+                <div class="bookingTabs">
+                    <ul>
+                        <li class="roomActive"><a href="#">BedRooms</a></li>
+                        <li><a href="#">Meeting Rooms</a></li>
+                        <li><a href="#">Restaurants</a></li>
+                    </ul>
+                </div>
+                <div class="tabContents">
+                    <div class="bedRooms">
+                        <div class="bedLocation">
+                            <label for="bookingSelect">location</label>
+                            <select name="LOCATION" id="bookingSelect">
+                                <option disabled selected value>Find Location</option>
+                                <option value="">Amsterdam, Herengracht</option>
+                                <option value="">Amsterdam, Lloyd</option>
+                                <option value="">Barcelona, Poblenou</option>
+                                <option value="">Berlin, Charlottenburg</option>
+                                <option value="">Brussels</option>
+                                <option value="">Chicago, Fulton Market</option>
+                                <option value="">Dublin</option>
+                                <option value="">Edinburgh</option>
+                                <option value="">Florence, Italy</option>
+                                <option value="">London, Holborn</option>
+                                <option value="">London, Shepherd’s Bush</option>
+                                <option value="">London, Shoreditch</option>
+                                <option value="">London, Southwark</option>
+                                <option value="">Los Angeles, Downtown</option>
+                                <option value="">New York, Williamsburg</option>
+                                <option value="">Paris</option>
+                                <option value="">Portland, Oregon</option>
+                                <option value="">Rome, Italy</option>
+                                <option value="">Vienna</option>
+                            </select>
+                            <div class="calendar">
+                                <label for="calendarlabel">check in / check out</label>
+                                <input type="text" id="checkDate" placeholder="Add Dates" readonly class="flatpickr-input">
+                            </div>
+                            <div class="roomNum">
+                                <label for="roomSelect">rooms</label>
+                                <select name="roomNums" id="roomSelect">
+                                    <option value="1">1 Room</option>
+                                    <option value="2">2 Rooms</option>
+                                    <option value="3">3 Rooms</option>
+                                    <option value="4">4 Rooms</option>
+                                </select>
+                            </div>
+                            <div class="guest">
+                                <span>ROOM1</span>
+                                <div class="adults">
+                                    <span>Adults</span>
+                                    <div class="stepper">
+                                        <button type="button" class="minus">-</button>
+                                        <input type="number"  min="1" value="2" max="4" readonly/>
+                                        <button type="button" class="plus">+</button>
+                                    </div>
+                                </div>
+                                <div class="child">
+                                    <span>Children <span>(1 ~ 17)</span></span>
+                                    <div class="stepper">
+                                        <button type="button" class="minus">-</button>
+                                        <input type="number"  min="0" value="0" max="3" readonly/>
+                                        <button type="button" class="plus">+</button>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="code">
+                                <label for="codeNum">got a code?</label>
+                                <input type="text" placeholder="Enter code">
+                            </div>
+                        </div>
+                        <button class="bookingBtn">Check Availability</button>
+                    </div>
+                    <div class="meetingRooms">
+                        <div class="meetingLocation">
+                            <label for="meetingSelect" disabled selected>location*</label>
+                            <select name="meeting" id="meetingSelect" title="LOCATION">
+                                <option disabled selected value>Please Select</option>
+                                <option value="">2NW5, Portland</option>
+                                <option value="">Alassio, Florence</option>
+                                <option value="">Albie, London</option>
+                                <option value="">Breman Brasserie, Amsterdam</option>
+                                <option value="">Bouvier, Vienna</option>
+                                <option value="">Cabra Cevicheria, Chicago</option>
+                                <option value="">Cantina Valentina, Brussels</option>
+                                <option value="">Cantina Valentina, Dublin</option>
+                                <option value="">Cayo Coco</option>
+                                <option value="">Chet's, London</option>
+                                <option value="">Cira, Chicago</option>
+                                <option value="">Cugino, Rome</option>
+                                <option value="">Elio, Rome</option>
+                                <option value="">Enoteca Violetta, Florence</option>
+                                <option value="">Four Corners, Barcelona</option>
+                                <option value="">House of Tandoor, Berlin</option>
+                                <option value="">Jacques' Bar, Paris</option>
+                                <option value="">Jaffa Cocktail and Raw Bar, Williamsburg NYC</option>
+                                <option value="">K'Far, Williamsburg NYC</option>
+                                <option value="">Laser Wolf, Williamsburg</option>
+                                <option value="">Lazy Bird, Chicago</option>
+                                <option value="">Llama Inn, London</option>
+                                <option value="">Lotti's, Amsterdam</option>
+                                <option value="">Lovely Rita, Portland</option>
+                                <option value="">Moonlark's Dinette, Downtown LA</option>
+                                <option value="">Patatino, Edinburgh</option>
+                                <option value="">Planche, Paris</option>
+                                <option value="">Rivié, Paris</option>
+                                <option value="">Rondo, London</option>
+                                <option value="">Seabird, London</option>
+                                <option value="">Tope, Brussels</option>
+                                <option value="">Tope, Barcelona</option>
+                                <option value="">Tope, Portland</option>
+                            </select>
+                        </div>
+                        <span>Looking to book a space? Send us your request below.</span>
+                        <button class="bookingBtn">Make Enquiry</button>
+                    </div>
+                    <div class="restaurants">
+                        <div class="resLocation">
+                            <label for="resLocation" disabled selected>location*</label>
+                            <select name="restaurant" id="resLocation" title="LOCATION">
+                                <option disabled selected value>Please Select</option>
+                                <option value="">Amsterdam, Herengracht</option>
+                                <option value="">Amsterdam, Lloyd</option>
+                                <option value="">Barcelona, Poblenou</option>
+                                <option value="">Brussels</option>
+                                <option value="">Berlin, Charlottenburg</option>
+                                <option value="">Chicago, Fulton Market</option>
+                                <option value="">London, Holborn</option>
+                                <option value="">London, Shepherd's Bush</option>
+                                <option value="">London, Shoreditch</option>
+                                <option value="">London, Southwark</option>
+                                <option value="">Los Angeles, Downtown</option>
+                                <option value="">New York, Williamsburg</option>
+                                <option value="">Paris</option>
+                                <option value="">Portland, Oregon</option>
+                                <option value="">Rome</option>
+                                <option value="">Vienna</option>
+                            </select>
+                        </div>
+                        <div class="calendar resCal">
+                            <label for="resCheckDate">date*</label>
+                            <input type="text" id="resCheckDate" placeholder="Add Dates" readonly class="flatpickr-input">
+                        </div>
+                        <div class="resTime">
+                            <label for="resSelect" disabled>location*</label>
+                            <select name="resTimeSelc" id="resSelect">
+                                <option value="">12:00 am</option>
+                                <option value="">12:30 am</option>
+                                <option value="">1:00 am</option>
+                                <option value="">1:30 am</option>
+                                <option value="">2:00 am</option>
+                                <option value="">2:30 am</option>
+                                <option value="">3:00 am</option>
+                                <option value="">3:30 am</option>
+                                <option value="">4:00 am</option>
+                                <option value="">4:30 am</option>
+                                <option value="">5:00 am</option>
+                                <option value="">5:30 am</option>
+                                <option value="">6:00 am</option>
+                                <option value="">6:30 am</option>
+                                <option value="">7:00 am</option>
+                                <option value="">7:30 am</option>
+                                <option value="">8:00 am</option>
+                                <option value="">8:30 am</option>
+                                <option value="">9:00 am</option>
+                                <option value="">9:30 am</option>
+                                <option value="">10:00 am</option>
+                                <option value="">10:30 am</option>
+                                <option value="">11:00 am</option>
+                                <option value="">11:30 am</option>
+                                <option value="">12:00 am</option>
+                                <option value="">12:30 am</option>
+                                <option value="">1:00 pm</option>
+                                <option value="">1:30 pm</option>
+                                <option value="">2:00 pm</option>
+                                <option value="">2:30 pm</option>
+                                <option value="">3:00 pm</option>
+                                <option value="">3:30 pm</option>
+                                <option value="">4:00 pm</option>
+                                <option value="">4:30 pm</option>
+                                <option value="">5:00 pm</option>
+                                <option value="">5:30 pm</option>
+                                <option value="">6:00 pm</option>
+                                <option value="">6:30 pm</option>
+                                <option value="">7:00 pm</option>
+                                <option value="">7:30 pm</option>
+                                <option value="" selected>8:00 pm</option>
+                                <option value="">8:30 pm</option>
+                                <option value="">9:00 pm</option>
+                                <option value="">9:30 pm</option>
+                                <option value="">10:00 pm</option>
+                                <option value="">10:30 pm</option>
+                                <option value="">11:00 pm</option>
+                                <option value="">11:30 pm</option>
+                            </select>
+                        </div>
+                        <div class="resGuest">
+                            <label for="resguests">guests*</label>
+                            <select name="resNum" id="resguests">
+                                <option value="1">1</option>
+                                <option value="2" selected>2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                            </select>
+                        </div>
+                        <button class="bookingDisactive">Check Availability</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- 헤더 -->
+    <main>
+        <section id="content1">
+            <div class="mainVideo">
+                <video autoplay muted loop>
+                    <source src="./img/main_video.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="videoTxt">
+                <span class="heroTit">Welcome to</span>
+                <span class="subTit">The Hoxton</span>
+            </div>
+            <div class="reserve">
+                <form>
+                    <div class="rsvLocation">
+                        <label for="reservLoc">location</label>
+                        <div class="reservLoc">
+                            <span class="selected-label">Find Location</span>
+                            <ul>
+                                <li disabled aria-readonly="true">Find Location</li>
+                                <li>Amsterdam, Herengracht</li>
+                                <li>Amsterdam, Lloyd</li>
+                                <li>Barcelona, Poblenou</li>
+                                <li>Berlin, Charlottenburg</li>
+                                <li>Brussels</li>
+                                <li>Chicago, Fulton Market</li>
+                                <li>Dublin</li>
+                                <li>Edinburgh</li>
+                                <li>Florence, Italy</li>
+                                <li>London, Holborn</li>
+                                <li>London, Shepherd’s Bush</li>
+                                <li>London, Shoreditch</li>
+                                <li>London, Southwark</li>
+                                <li>Los Angeles, Downtown</li>
+                                <li>New York, Williamsburg</li>
+                                <li>Paris</li>
+                                <li>Portland, Oregon</li>
+                                <li>Rome, Italy</li>
+                                <li>Vienna</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="rsvDate">
+                        <label for="calendarlabel">check in / check out</label>
+                        <input type="text" id="reservDate" placeholder="Add Dates" readonly class="flatpickr-input">
+                    </div>
+                    <div class="rsvGuest">
+                        <label for="reservLoc">guests</label>
+                        <span class="rsvedit">edit</span>
+                        <span class="reservGuest">1 room, 2 Guests</span>
+                        <!-- find a room과 연결해야 함. -->
+                    </div>
+                    <div class="rsvCode">
+                        <label for="codeNum">got a code?</label>
+                        <input type="text" placeholder="Enter code">
+                    </div>
+                    <div class="rsvFind"><span>Check Availability</span></div>
+                </form>
+            </div>
+        </section>
+        <!-- 메인비디오 -->
+        <section id="content2">
+            <div class="tasteCity">
+                <div class="tasteImg"><img src="./img/Taste-the-city-promo-e1767891396552.jpg" alt="content2Img"></div>
+                <div class="tasteWrap">
+                    <span>Taste the City with The Hoxton Hotels</span>
+                    <p>Come for a foodie getaway – 
+                        we’ll throw in £50/$50/€50 
+                        and drinks on us. Plus a tasty 
+                        room upgrade when you stay 3 
+                        nights or more.
+                    </p>
+                    <button>View offer</button>
+                </div>
+            </div>
+        </section>
+        <!-- 컨텐츠2 -->
+        <!-- <section id="content3">
+            <div class="galTabs">
+                <h2>Our Hotel Locations</h2>
+                <div class="BtnWraps">
+                    <button class="galTabAct">europe</button>
+                    <button>uk & ireland</button>
+                    <button>usa</button>
+                    <button>all</button>
+                </div>
+            </div>
+            <div class="galleryWrap" id="gallery"></div>
+        </section> -->
+        <section id="content3">
+            <div class="galTabs">
+                <h2>Our Hotel Locations</h2>
+
+                <div class="BtnWraps">
+                    <button class="galTabAct" data-tab="europe">europe</button>
+                    <button data-tab="ukIreland">uk & ireland</button>
+                    <button data-tab="usa">usa</button>
+                    <button data-tab="all">all</button>
+                </div>
+            </div>
+
+            <div class="galleryWrap">
+                <div class="galbox">
+                    <div class="swiper location-swiper">
+                        <div class="swiper-wrapper" id="locationSwiperWrapper">
+                            <!-- JS로 swiper-slide 삽입 -->
+                        </div>
+    
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 컨텐츠3 -->
+        <section id="content4">
+            <div class="news">
+                <div class="newsBox newsBox1">
+                    <div class="ss ss1">
+                        <div class="newsWrap newsWrap1">
+                            <img src="./img/See-all-hotels.jpg" alt="newsImg1">
+                            <div class="newstxt">
+                                <span>The Hoxton Dublin, Now Open</span>
+                                <p>Tucked away on bustling Exchequer Street in a historic 
+                                    building, our Dublin home puts you right in the heart of 
+                                    the city’s cultural core. Think cobbled lanes, artisan 
+                                    coffee shops, hidden bars, and some of the best bites 
+                                    in the city.
+                                </p>
+                                <button>Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ss ss2">
+                        <div class="newsWrap newsWrap2">
+                            <img src="./img/romantic-getaway.jpg" alt="newsImg2">
+                            <div class="newstxt">
+                                <span>Love is in the air</span>
+                                <p>Valentine's Day, Pal-entine's Day... we're total lovebirds 
+                                    at The Hox, so how about heading our way to share the 
+                                    love? Check-in and cosy up with your loved one(s). 
+                                    Make it romance for two with dinner at ours, or grab 
+                                    your besties for a room service sleepover. Maybe whisk 
+                                    yourself away on a solo minibreak. Romance season, covered.
+                                </p>
+                                <button>Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="newsBox news2">
+                    <div class="ss ss3">
+                        <div class="newsWrap newsWrap3">
+                            <div class="swiper mySwiper newImgWrap">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="./img/Global-offer-page.jpg" alt="newsImg3-1"></div>
+                                    <div class="swiper-slide"><img src="./img/Global-offer-page2.jpg" alt="newsImg3-2"></div>
+                                    <div class="swiper-slide"><img src="./img/Global-offer-page3.jpg" alt="newsImg3-3"></div>
+                                    <div class="swiper-slide"><img src="./img/Global-offer-page4.jpg" alt="newsImg3-4"></div>
+                                    <div class="swiper-slide"><img src="./img/Global-offer-page5.jpg" alt="newsImg3-5"></div>
+                                </div>
+                                <div class="swiper-button-next sw-next1"></div>
+                                <div class="swiper-button-prev sw-prev1"></div>
+                            </div>
+                            <div class="newstxt">
+                                <div class="swiper-pagination"></div>
+                                <span>Why Book via thehoxton.com?</span>
+                                <p>Book direct on thehoxton.com to enjoy early check-in 
+                                    and late check-out at any time for free with Flexy Time, 
+                                    and cancel for free up until 2pm the day before arrival.
+                                </p>
+                                <button>View Offer</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ss ss4">
+                        <div class="newsWrap newsWrap4">
+                            <div class="swiper mySwiper1 newImgWrap1">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="./img/Hoxton-Barc-Lodon-Collab-1400-x-1000-Medium.jpeg" alt="newsImg4-1"></div>
+                                    <div class="swiper-slide"><img src="./img/Presstigieux-61.jpg" alt="newsImg4-2"></div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                            <div class="newstxt">
+                                <div class="swiper-pagination1"></div>
+                                <span>Referral Scheme</span>
+                                <p>Give your pals the same great feeling you just got with 
+                                    15% off their first Hox stay (bonus: you’ll get 15% off 
+                                    your next stay too, at any Hox worldwide).
+                                </p>
+                                <button>Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 컨텐츠4 -->
+        <section id="content5">
+            <div class="signUp">
+                <img src="./img/News-coming.png" alt="signupImg">
+                <h3>Get the Inside Scoop</h3>
+                <p>Sign up to our newsletter to be the first to hear about great offers, new openings and events.</p>
+                <form action="">
+                    <div class="signName">
+                        <input type="text" id="firstName" placeholder=" ">
+                        <label for="firstName">First Name *</label>
+                    </div>
+
+                    <div class="signMail">
+                        
+                        <input type="email" id="mailAdd" placeholder=" ">
+                        <label for="mailAdd">Email Address *</label>
+                    </div>
+                </form>
+                <button>Sign me up</button>
+                <span class="privacy">Read The Hoxton's <span>Privacy Policy</span>.</span>
+            </div>
+        </section>
+        <!-- 컨텐츠5 -->
+    </main>
+    <!-- 내용 끝 -->
+    <footer id="footer">
+        <div class="footerTop">
+            <h2 class="footerLogo"><img src="./img/the_hoxton_logo_4.svg" alt="footerlogoImg"></h2>
+            <div class="footerMenu">
+                <div class="footerLinks">
+                    <span>Links</span>
+                    <ul>
+                        <li><a href="#">Manage My Booking</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Meetings & Celebrations</a></li>
+                        <li><a href="#">Referral Scheme</a></li>
+                        <li><a href="#">The Good Stuff</a></li>
+                        <li><a href="#">Working From_</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Hotel Development</a></li>
+                        <li><a href="#">Terms & Policies</a></li>
+                        <li><a href="#">Cookie Settings</a></li>
+                    </ul>
+                </div>
+                <div class="footerSocial">
+                    <span>Social</span>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Threads</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                        <li><a href="#">TikTok</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footerLang">
+                <span class="footLangTit">Language</span>
+                <span class="footLangEn">English</span>
+                <div class="footlanguageList">
+                    <ul>
+                        <li><a href="#">Español</a></li>
+                        <li><a href="#">Deutsch</a></li>
+                        <li><a href="#">Français</a></li>
+                        <li><a href="#">Nederlands</a></li>
+                        <li><a href="#">Italiano</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <a href="#">
+                <svg role="img" aria-label="Ennismore logo image" class="footer__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 565.76 276.16"><defs><style>.cls-1{fill:#eee6dd;}</style></defs><polygon class="cls-1" points="187.41 31.86 187.41 187.03 152.4 44.05 138.89 48.76 138.89 227.4 152.44 232.12 152.44 103.72 187.31 244.27 201.44 249.19 201.44 26.97 187.41 31.86"></polygon><polygon class="cls-1" points="538.4 171.73 538.4 144.18 563.14 143.52 563.14 131.77 538.4 131.1 538.4 104.23 565.76 112.57 565.76 99.97 525.08 85.8 525.08 190.36 565.76 176.19 565.76 163.52 538.4 171.73"></polygon><polygon class="cls-1" points="218.26 21.11 218.26 255.05 232.29 259.94 232.29 16.22 218.26 21.11"></polygon><polygon class="cls-1" points="13.56 170.62 13.56 144.96 42.28 145.19 42.28 131.02 13.56 132.63 13.56 105.2 45.06 95.92 45.06 81.45 0 97.15 0 179.01 45.06 194.7 45.06 180.01 13.56 170.62"></polygon><polygon class="cls-1" points="108.51 59.34 108.51 175.74 73.28 71.62 59.51 76.42 59.51 199.74 73.07 204.46 73.07 114.53 108.3 216.74 122.07 221.53 122.07 54.62 108.51 59.34"></polygon><path class="cls-1" d="M501.92,148c7.82-4.35,9.29-12.79,9.29-18.47V98.77c0-11.81-5.16-19.61-15.56-23.25l-27-9.37V210l13.79-4.81V150.87h6.11l10.25,48.66L512,194.92Zm-4-22.8c0,10.15-3.28,12.23-8.21,12.23H482.4V84.82l7,2.2c6.61,2.07,8.45,5.77,8.45,15.25Z"></path><path class="cls-1" d="M291.06,139.45,277.6,121.74c-9.91-13.14-13.43-28.54-13.43-58.85V27.62c0-6.31,1.26-8.64,6.87-10.59l7.8-2.71L286.48,17c5.57,1.93,6.94,4.31,6.94,10.62V81.94h13.8V25.17c0-12.05-2.34-16.1-11.45-19.27L278.84,0l-17,5.92c-9.15,3.2-11.44,7.2-11.44,19.25V61.62c0,35.08,4.53,54.7,16.15,70L280,149.32c9.66,12.71,13.43,29.21,13.43,58.84v40.38c0,6.31-1.37,8.61-6.89,10.61l-7.69,2.69-7.73-2.69c-5.64-1.95-6.93-4.3-6.93-10.61V194.23h-13.8V251c0,12.05,2.48,16.12,11.46,19.27l17,5.9,16.94-5.94c9-3.11,11.43-7.18,11.43-19.23V209.44C307.21,174.25,302.68,154.63,291.06,139.45Z"></path><path class="cls-1" d="M440.2,56.22l-13.06-4.58c-8.57-3-18.36.33-18.36,15V210c0,14.49,9.34,17.68,19.54,14.11L443,219c7.84-2.74,11.27-7.77,11.27-17.2V78.53C454.23,66.69,449.77,59.6,440.2,56.22Zm.68,24.13v116.7c0,5.95-1.18,8.81-5.81,10.19L431,208.61c-5,1.54-7.94,1.32-7.94-7.33V74.16c0-8.19,2.45-8.29,6.58-7l5,1.6C439,70.15,440.88,72.06,440.88,80.35Z"></path><polygon class="cls-1" points="339.57 255 339.57 96.57 354.38 175.41 364.88 174.36 380.48 104.73 380.48 240.75 394.27 235.94 394.27 40.22 382.28 36.04 360.59 136.92 338.36 20.73 325.31 16.19 325.31 259.97 339.57 255"></polygon>
+                </svg>
+            </a>
+            <p>© Ennismore 2026</p>
+        </div>
+    </footer>
+    <!-- 푸터 -->
+</div>
+
+</body>
+</html>

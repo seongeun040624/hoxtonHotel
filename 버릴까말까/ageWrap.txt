@@ -1,0 +1,112 @@
+html
+<div class="ageWrap">
+                                    <div class="childAge">
+                                        <label for="ages1">child age <span>(1)</span></label>
+                                        <select name="age" id="ages1" class="ages">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                        </select>
+                                    </div>
+                                   <div class="childAge">
+                                        <label for="ages2">child age <span>(1)</span></label>
+                                        <select name="age" id="ages2" class="ages">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                        </select>
+                                    </div>
+                                    <div class="childAge">
+                                        <label for="ages3">child age <span>(1)</span></label>
+                                        <select name="age" id="ages3" class="ages">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+
+
+css
+.ageWrap{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px 20px 10px 20px;
+}
+.guest .ageWrap .childAge{
+    width: 47%;
+    display: none;
+}
+.guest .ageWrap .childAge label{
+    position: relative;
+    top: 22px; left: 15px;
+    font-size: 10px;
+    color: #555;
+    height: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.guest .ageWrap .childAge label span{font-size: 10px;}
+.guest .ageWrap .childAge .ages{
+    
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 0;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    letter-spacing: .5px;
+    padding-top: 25px;
+    appearance: none;
+    background: url(../img/arrow.svg) no-repeat #fff;
+    background-position: 120px;
+    cursor: pointer;
+
+}
+.guest .ageWrap .childAge select.ages option{font-size: 15px;}

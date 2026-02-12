@@ -1,0 +1,160 @@
+//scroll내릴때 나오는 헤더
+/* .headerScroll{
+    width: 100%;
+    height: 98px;
+    cursor: pointer;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+
+    .sclBanner{
+        width: 100%;
+        height: 39px;
+        margin: 0 auto;
+        background: #000;
+        position: fixed;
+        top: 0;
+        z-index: 101;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        font-weight: bold;
+        cursor: pointer;
+
+        .textGroup:not(:first-child){
+            position: absolute;
+            display: none;
+        }
+        p{
+            letter-spacing: -.5px;
+            margin-right: 15px;
+            display: inline-block;
+        }
+        span{
+            text-decoration: underline;
+        }
+    }
+
+    .scollFlex{
+        background: #FEF2E3;
+        width: 100%;
+        height: calc(100% - 39px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+        position: absolute;
+        top: 39px;
+
+        h2{
+            width: 12rem;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-right: 1px solid #ddd;
+        }
+        .sclLocation{
+            height: 100%;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            position: relative;
+
+            span{
+                color: #555;
+                font-weight: 500;
+            }
+            
+            ::before{
+                content: "";
+                position: absolute;
+                width: 1.5px;
+                height: 13px;
+                background: #888;
+                top: 23px; left: 20px;
+            }
+            ::after{
+                content: "";
+                position: absolute;
+                width: 13px;
+                height: 1.5px;
+                background: #888;
+                top: 50%; left: 14.5px;
+                transform: translateY(-50%);
+            }
+            &.active::before {
+                transform: rotate(45deg);
+                top: 24px;
+            }
+            &.active::after {
+                transform: rotate(45deg);
+                top: 29.6px;
+            }
+        }
+        .sclFInd{
+            width: 12rem;
+            height: 100%;
+            background: #FF9272;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-left: 1px solid #ddd;
+
+            span{
+                color: #7f2006;
+                font-size: 14px;
+                font-weight: bold;
+            }
+        }
+    }
+    .locationWrap{
+        opacity: 0;
+        width: 100%;
+        height: calc(100vh - 80px);
+        position: absolute;
+        top: 80px; left: 0;
+        background: rgba(0, 0, 0, .5);
+        border-right: 1px solid #ddd;
+        transition: .3s;
+        overflow: hidden;
+        display: none;
+
+        visibility: hidden; // 눈에 안 보일 때 클릭 방지
+        pointer-events: none; 
+        transition: opacity 0.3s ease; // 부드러운 효과 추가
+
+        &.is-open {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto; // 보일 때만 클릭 가능하게
+        }
+    }
+    .roomWrap{
+        width: 100%;
+        height: calc(100% - 59px);
+        position: absolute;
+        top: 59px; left: 0;
+        display: none;
+        z-index: 999;
+        //display: flex;
+        overflow: hidden;
+    }
+    
+    // 초기 상태: 숨김
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    pointer-events: none;
+
+    &.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+} */

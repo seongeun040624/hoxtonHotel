@@ -1,0 +1,1109 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ul, li{list-style: none;}
+a{text-decoration: none; color: #333;}
+
+html, body{height: 100%;}
+
+#wrap{
+    width: 100%;
+    height: 100%;
+}
+
+
+#header{
+    width: 100%;
+    height: 158px;
+}
+
+#header .headBanner{
+    width: 100%;
+    height: 39px;
+    margin: 0 auto;
+    background: #000;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #FEF2E3;
+    border-radius: 4px;
+}
+.textGroup:not(:first-child){
+    position: absolute;
+    display: none;
+}
+
+.headBanner p{
+    letter-spacing: -.5px;
+    margin-right: 15px;
+    display: inline-block;
+}
+.headBanner span{
+    text-decoration: underline;
+}
+
+
+#header .mainHeader{
+    width: 100%;
+    height: 119px;
+    background: #FEF2E3;
+    position: absolute;
+    top: 39px;
+    display: flex;
+    border-bottom: 1px solid #ddd;
+}
+
+.mainHeader h1.logo{
+    width: 220px;
+    height: 100%;
+    border-right: 1px solid #ddd;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.mainHeader .headerRight{
+    width: 90%;
+    height: 100%;
+}
+.mainHeader .headerRight #nav{
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+#nav>ul{
+    display: flex;
+    margin-right: 10px;
+}
+#nav>ul>li{
+    font-size: 13px;
+    position: relative;
+}
+#nav>ul>li>a{
+    display: block;
+    padding-right: 20px;
+    font-weight: bold;
+    color: #555;
+    transition: color .3s;
+}
+#nav>ul>li:last-child::before{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 18px;
+    background: #999;
+    top: 0;left: -10px;
+}
+
+#nav>ul>li.language{
+    position: relative;
+    padding-left: 5px;
+}
+#nav>ul>li>span{
+    display: block;
+    padding-right: 40px;
+    font-weight: 500;
+    cursor: pointer;
+}
+#nav>ul>li>span::after{
+    content: "";
+    position: absolute;
+    top: 4px; right: 20px;
+    background: url(../img/arrow.svg) center;
+    width: 13px;
+    height: 8px;
+}
+
+
+/* 모바일 헤더 부분 */
+.mobileHeader{}
+
+
+
+
+/* 컴퓨터화면헤더 이어서 */
+#nav>ul>li>div>ul{
+    display: none;
+    z-index: 99;
+    position: absolute;
+    top: 22px; left: -10px;
+    background: #FEF2E3;
+    width: 100%;
+}
+#nav>ul>li>div>ul>li{
+    padding: 10px;
+}
+#nav>ul>li>div>ul>li>a{
+    font-weight: 500;
+    color: #555;
+}
+
+.mainHeader .headerRight .locationRoom{
+    display: flex;
+    width: 100%;
+    height: 50%;
+}
+.locationRoom .location{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    position: relative;
+    cursor: pointer;
+}
+.locationRoom .location{
+    font-weight: 600;
+    color: #555;
+    letter-spacing: -.5px;
+}
+.locationRoom .location::before{
+    content: "";
+    position: absolute;
+    top: 25px; left: 28px;
+    width: 1.5px;
+    height: 12.8px;
+    background: #888;
+    transition: .3s;
+    transform-origin: center;
+}
+.locationRoom .location::after{
+    content: "";
+    position: absolute;
+    top: 30px; left: 22.5px;
+    width: 12.8px;
+    height: 1.5px;
+    background: #888;
+    transition: .3s;
+    transform-origin: center;
+}
+
+.locationRoom .location.active::before {
+  transform: rotate(45deg);
+  top: 24px;
+}
+.locationRoom .location.active::after {
+  transform: rotate(45deg);
+  top: 29.6px;
+}
+
+#header .locationWrap{
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    /* z-index: 91; */
+    top: 158px; left: 0;
+    background: rgba(0, 0, 0, .5);
+    border-right: 1px solid #ddd;
+    height: calc(100% - 158px);
+    transition: .3s;
+    overflow: hidden;
+}
+.locationWrap .locationList{
+    width: 25%;
+    background: #FEF2E3;
+    height: 100%;
+    padding: 15px 0 15px 30px;
+}
+.locationList>ul>li>a{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 15px 0;
+    position: relative;
+}
+
+#header .locationWrap.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.locationList>ul>li>a:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
+.locationList>ul>li:not(:nth-child(5), :nth-child(6))>a::after{
+    content: "";
+    position: absolute;
+    top: 26px; right: -18px;
+    width: 15px;
+    height: 1px;
+    background: #888;
+}
+.locationList>ul>li:not(:nth-child(5), :nth-child(6))>a::before{
+    content: "";
+    position: absolute;
+    top: 19px; right: -11px;
+    width: 1px;
+    height: 15px;
+    background: #888;
+}
+
+
+.locationList>ul>li>.locationDetail{
+    display: none;
+    background: #FEF2E3;
+    position: absolute;
+    z-index: 90;
+    width: 25%;
+    top: 0; left: calc(100% - 75%);
+    height: 100%;
+    padding: 15px 0;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    transition: .3s;
+}
+
+.locationDetail2{display: none;}
+.locationDetail3{display: none;}
+.locationDetail4{display: none;}
+.locationDetail>ul>li{
+    display: block;
+    padding: 0 30px;
+}
+.locationDetail>ul>li>a{
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 15px 0;
+}
+.locationImg{
+    position: absolute;
+    top: 0; right: 0;
+}
+.locationImg img{
+    display: none;
+    position: absolute;
+    width: 50vw;
+    height: calc(100vh - 158px);
+    top: 0; right: 0;
+    object-fit: cover;
+    transition: ease-in-out .3s;
+}
+.locationImg img.active{display: block;}
+
+.locationImg5 img, .locationImg6 img{
+    width: 75vw;
+}
+
+.locationDetail>ul>li>a:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
+.locationList > ul > li > .locationDetail {
+  display: block;           
+  opacity: 0;
+  pointer-events: none;
+}
+.locationList > ul > li > .locationDetail.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+
+.locationRoom .room{
+    width: 145px;
+    height: 50%;
+    background: #FF9272;
+    border-left: 1px solid #ddd;
+    position: absolute;
+    right: 0; bottom: 0;
+}
+.locationRoom .room a{
+    height: 100%;
+    color: #7f2006;
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+#header .roomWrap{
+    width: 100%;
+    height: calc(100% - 39px);
+    position: absolute;
+    top: 39px; left: 0;
+    display: flex;
+    overflow: hidden;
+}
+.roomWrap .bookingCLosepannel{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+    /* position: absolute;
+    left: 0; top: 0; */
+}
+.roomWrap .bookingWrap{
+    width: 376px;
+    height: 100%;
+    background: #FEF2E3;
+    transition: .3s;
+    /* position: absolute;
+    z-index: 100;
+    top: 0; right: -376px; */
+}
+
+.roomWrap .bookingWrap .bookingTop{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 30px 20px;
+}
+.bookingTop span{
+    color: #b1b1b1;
+    font-weight: 600;
+    font-size: 13px;
+}
+.bookingTop .bookingClose{
+    background: none;
+    width: 20px;
+    height: 20px;
+    outline: none;
+    border: none;
+    position: relative;
+    cursor: pointer;
+}
+.bookingTop .bookingClose::before{
+    content: "";
+    width: 1px;
+    height: 20px;
+    background: #555;
+    position: absolute;
+    top: 0; left: 10px;
+    transform: rotate(45deg);
+}
+.bookingTop .bookingClose::after{
+    content: "";
+    width: 1px;
+    height: 20px;
+    background: #555;
+    position: absolute;
+    top: 0; left: 10px;
+    transform: rotate(-45deg);
+}
+
+
+.bookingTabs{
+    width: 100%;
+    /* height: 40px; */
+    border-bottom: 1px solid #ddd;
+    display: block;
+    margin: 0 auto;
+}
+.bookingTabs>ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bookingTabs>ul>li{
+    height: 50px;
+    padding: 15px 0;
+    padding-bottom: 20px;
+}
+.bookingTabs>ul>li>a{
+    display: block;
+    color: #b1b1b1;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 0 20px;
+    position: relative;
+}
+.bookingTabs>ul>li.roomActive>a::after{
+    content: "";
+    position: absolute;
+    bottom: -22px; left: 0;
+    width: 100%;
+    height: 1px;
+    background: #333;
+}
+.bookingTabs>ul>li.roomActive a{color: #000;}
+
+
+.tabContents{
+    display: flex;                  /* [변경] block → flex */
+    flex-direction: column;         /* [추가] 세로 정렬 */
+    width: 100%;
+    height: calc(100% - 112px);
+    overflow: hidden;    
+}
+
+.tabContents .bedRooms{
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    flex: 1;                        /* [추가] 남은 영역 채움 */
+    /* overflow-y: scroll;  */              /* [추가] 스크롤은 여기서만 */
+    padding-bottom: 60px;
+}
+.tabContents .bedRooms .bedLocation{
+    padding: 10px 20px;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    
+}
+.bedLocation>label{
+    position: relative;
+    top: 22px; left: 15px;
+    font-size: 11px;
+    color: #b1b1b1;
+    height: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.bedLocation>select{
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 0;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    letter-spacing: -.5px;
+    padding-top: 25px;
+    appearance: none;
+    background: url(../img/arrow.svg) no-repeat #fff;
+    background-position: 300px;
+}
+.bedLocation>select option{font-size: 16px;}
+
+
+
+.bedLocation .calendar label{
+    position: relative;
+    top: 22px; left: 15px;
+    font-size: 11px;
+    color: #b1b1b1;
+    height: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+.flatpickr-input[readonly] {
+    cursor: pointer;
+    width: 100%;
+    border-radius: 0;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    letter-spacing: .5px;
+    padding: 10px 15px;
+    padding-top: 27px;
+}
+.flatpickr-input[readonly]::placeholder{
+    color: #555;
+}
+
+
+/* 캘린더 css */
+.flatpickr-calendar {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 0;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    letter-spacing: .5px;
+    padding-top: 25px;
+    appearance: none;
+}
+.flatpickr-months {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 8px;
+}
+.flatpickr-current-month {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  font-size: 16px !important;
+  font-weight: 500;
+}
+.flatpickr-monthDropdown-months {
+    padding-right: 4px;
+    margin: -1px 10px 0 0 !important;
+}
+.flatpickr-monthDropdown-months option {font-size: 13px;}
+.cur-year {
+  font-size: 14px;
+  font-weight: 500;
+}
+.flatpickr-prev-month, .flatpickr-next-month {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.flatpickr-weekdays { margin-top: 6px;}
+.flatpickr-weekday {
+  font-size: 12px;
+  font-weight: 500;
+}
+.flatpickr-day {font-size: 13px;}
+
+
+
+
+.bedLocation .roomNum label{
+    position: relative;
+    top: 22px; left: 15px;
+    font-size: 11px;
+    color: #b1b1b1;
+    height: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.bedLocation .roomNum select{
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 0;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    letter-spacing: .5px;
+    padding-top: 25px;
+    appearance: none;
+    background: url(../img/arrow.svg) no-repeat #fff;
+    background-position: 300px;
+}
+.bedLocation .roomNum select option{font-size: 16px;}
+
+
+.bedLocation .guest{
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+}
+.bedLocation .guest>span{
+    font-size: 10px;
+    color: #333;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+
+.bedLocation .guest .adults{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.bedLocation .guest .adults span{font-size: 20px;}
+.bedLocation .guest .adults .stepper{
+    width: 100px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bedLocation .guest .adults .stepper .minus{
+    width: 30px;
+    height: 30px;
+    display: block;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+.bedLocation .guest .adults .stepper input{
+    display: block;
+    background: none;
+    border: none;
+    text-align: center;
+    padding-left: 15px;
+    width: 40px;
+}
+.bedLocation .guest .adults .stepper .plus{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+
+
+.bedLocation .guest .child{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.bedLocation .guest .child span{font-size: 20px;}
+.bedLocation .guest .child span>span{font-size: 14px;}
+.bedLocation .guest .child .stepper{
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bedLocation .guest .child .stepper .minus{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+.bedLocation .guest .child .stepper input{
+    background: none;
+    border: none;
+    display: block;
+    width: 40px;
+    text-align: center;
+    padding-left: 14px;
+}
+.bedLocation .guest .child .stepper .plus{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+
+.bedLocation .code{
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+.bedLocation .code label{
+    position: relative;
+    top: 22px; left: 15px;
+    font-size: 11px;
+    color: #b1b1b1;
+    height: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.bedLocation .code input{
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 0;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    letter-spacing: .5px;
+    padding-top: 25px;
+}
+.bedLocation .code input::placeholder{
+    color: #555;
+}
+
+
+
+
+.tabContents .meetingRooms{
+    display: none;
+    /* display: block; */
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.tabContents .meetingRooms .meetingLocation{
+    padding: 10px 20px;
+}
+.tabContents .meetingRooms .meetingLocation label{
+    position: relative;
+    top: 22px; left: 15px;
+    font-size: 11px;
+    color: #b1b1b1;
+    height: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.tabContents .meetingRooms .meetingLocation select{
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 0;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    letter-spacing: -.5px;
+    padding-top: 25px;
+    appearance: none;
+    background: url(../img/arrow.svg) no-repeat #fff;
+    background-position: 300px;
+}
+
+.tabContents .meetingRooms .meetingLocation select option{font-size: 16px;}
+.tabContents .meetingRooms span{
+    font-size: 18px;
+    color: #444;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: block;
+    padding: 0 20px;
+    line-height: 150%;
+}
+
+
+
+.tabContents .restaurants{
+    display: none;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.tabContents .restaurants .resLocation{padding: 0 20px; margin-top: 10px;}
+.tabContents .restaurants .resLocation label{
+    position: relative;
+    top: 22px; left: 15px;
+    font-size: 11px;
+    color: #b1b1b1;
+    height: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.tabContents .restaurants .resLocation select{
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 0;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    letter-spacing: -.5px;
+    padding-top: 25px;
+    appearance: none;
+    background: url(../img/arrow.svg) no-repeat #fff;
+    background-position: 300px;
+}
+.tabContents .restaurants .resLocation select option{font-size: 16px;}
+
+
+.tabContents .restaurants .calendar{padding: 0 20px;}
+.tabContents .restaurants .calendar label{}
+.tabContents .restaurants .calendar input{}
+.restaurants .calendar label{
+    position: relative;
+    top: 22px; left: 15px;
+    font-size: 11px;
+    color: #b1b1b1;
+    height: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+.flatpickr-input[readonly] {
+    cursor: pointer;
+    width: 100%;
+    border-radius: 0;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    letter-spacing: .5px;
+    padding: 10px 15px;
+    padding-top: 27px;
+}
+.flatpickr-input[readonly]::placeholder{
+    color: #555;
+}
+
+
+/* 캘린더 css */
+.flatpickr-calendar {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 0;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    letter-spacing: .5px;
+    padding-top: 25px;
+    appearance: none;
+}
+.flatpickr-months {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 8px;
+}
+.flatpickr-current-month {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  font-size: 16px !important;
+  font-weight: 500;
+}
+.flatpickr-monthDropdown-months {
+    padding-right: 4px;
+    margin: -1px 10px 0 0 !important;
+}
+.flatpickr-monthDropdown-months option {font-size: 13px;}
+.cur-year {
+  font-size: 14px;
+  font-weight: 500;
+}
+.flatpickr-prev-month, .flatpickr-next-month {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.flatpickr-weekdays { margin-top: 6px;}
+.flatpickr-weekday {
+  font-size: 12px;
+  font-weight: 500;
+}
+.flatpickr-day {font-size: 13px;}
+
+
+.tabContents .restaurants .resTime{padding: 0 20px;}
+.tabContents .restaurants .resTime label{
+    position: relative;
+    top: 22px; left: 15px;
+    font-size: 11px;
+    color: #b1b1b1;
+    height: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.tabContents .restaurants .resTime select{
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 0;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    letter-spacing: -.5px;
+    padding-top: 25px;
+    appearance: none;
+    background: url(../img/arrow.svg) no-repeat #fff;
+    background-position: 300px;
+}
+.tabContents .restaurants .resTime select option{font-size: 16px;}
+
+
+.tabContents .restaurants .resGuest{padding: 0 20px;}
+.tabContents .restaurants .resGuest label{
+    position: relative;
+    top: 22px; left: 15px;
+    font-size: 11px;
+    color: #b1b1b1;
+    height: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.tabContents .restaurants .resGuest select{
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 0;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    letter-spacing: -.5px;
+    padding-top: 25px;
+    appearance: none;
+    background: url(../img/arrow.svg) no-repeat #fff;
+    background-position: 300px;
+}
+.tabContents .restaurants .resGuest select option{font-size: 16px;}
+
+
+
+.tabContents button.bookingBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #FEF2E3;
+    background: #3e3a37;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1px;
+    width: 90%;
+    margin: 20px 0;
+    padding: 20px;
+    position: absolute;
+    bottom: 0px; left: 12px;
+    transition: .4s;
+}
+.tabContents button.bookingDisactive{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #FEF2E3;
+    background: #9E968D;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1px;
+    width: 90%;
+    margin: 20px 0;
+    padding: 20px;
+    position: absolute;
+    bottom: 0px; left: 20px;
+    transition: .4s;
+}
+.tabContents button.bookingBtn:hover{
+    border: 1px solid #3e3a37;
+    color: #3e3a37;
+    background: #FEF2E3;
+}
+.tabContents select{cursor: pointer;}
+
+
+
+
+.tabContents select:hover, .tabContents input:hover{
+    border: 1px solid #000;
+}
+.tabContents select:focus, input:focus{outline: none;}
+
+.content1{}
+.content2{}
+.content3{}
+.content4{}
+#footer{}
+
+
+/* 대형컴퓨터화면  1440~ */
+@media screen and (max-width: 1440px) {
+    
+}
+
+/* 일반데스크톱 1200~ 1439 */
+@media screen and (max-width: 1200px) {
+    .locationList>ul>li>a{
+        font-size: 18px;
+        padding: 15px 0;
+    }
+    .locationDetail>ul>li{
+        display: block;
+        padding: 0 20px;
+    }
+    .locationDetail>ul>li>a{
+        font-size: 16px;
+        padding: 15px 0;
+    }
+}
+
+/* 노트북 1024 ~ 1199 */
+@media screen and (max-width: 1024px) {
+    .mainHeader h1.logo{
+        width: 180px;
+        padding: 40px 25px;
+    }
+    .mainHeader .headerRight #nav{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+    }
+    #nav>ul{
+        display: flex;
+        margin:0 10px;
+    }
+    #nav>ul>li{font-size: 11.5px;}
+    #nav>ul>li>a{
+        padding-right: 20px;
+        letter-spacing: -.5px;
+    }
+    .languageList a{
+        font-size: 11.5px; 
+        letter-spacing: -.5px;
+    }
+    #nav>ul>li>div>ul>li{padding: 10px 10px 10px 15px;}
+    .locationList>ul>li>a{
+        font-size: 16px;
+        padding: 15px 0;
+    }
+    .locationWrap .locationList{
+        padding: 15px 10px 15px 25px;
+    }
+    .locationDetail>ul>li{
+        display: block; 
+        padding: 0 15px;
+    }
+    .locationDetail>ul>li>a{
+        font-size: 14px;
+        padding: 15px 0;
+    }
+    
+}
+
+/* 원본 사이트 반응 기준 900 ~ 1023 */
+@media screen and (max-width: 900px) {
+    #header{display: none;}
+}
+
+/* 테블릿 768 ~ 899 */
+/* 메뉴(nav 등)가 햄버거 메뉴로 변경되는 구간 */
+@media screen and (max-width: 768px) {
+    #header .roomWrap{
+        width: 100%;
+        height: calc(100% - 39px);
+        position: absolute;
+        top: 39px; left: 0;
+        display: flex;
+        overflow: hidden;
+    }
+    .roomWrap .bookingCLosepannel{
+        display: none;
+    }
+    .roomWrap .bookingWrap{
+        width: 100%;
+        height: 100%;
+    }
+    .bookingTabs>ul>li{
+        width: 33.33333%;
+        text-align: center;
+        height: 50px;
+        padding: 15px 0;
+        padding-bottom: 20px;
+    }
+    .tabContents .bedLocation select{
+        background: url(../img/arrow.svg) no-repeat #fff;
+        background-position: 670px;
+    }
+    .tabContents .meetingRooms .meetingLocation select{
+        background: url(../img/arrow.svg) no-repeat #fff;
+        background-position: 670px;
+    }
+    .tabContents .restaurants .resLocation select{
+        background: url(../img/arrow.svg) no-repeat #fff;
+        background-position: 670px;
+    }
+    .tabContents .restaurants .resTime select{
+        background: url(../img/arrow.svg) no-repeat #fff;
+        background-position: 670px;
+    }
+    .tabContents .restaurants .resGuest select{
+        background: url(../img/arrow.svg) no-repeat #fff;
+        background-position: 670px;
+    }
+
+    .tabContents button.bookingBtn{
+        width: 92%;
+        position: absolute;
+        bottom: 0px; left: 25px;
+    }
+    .tabContents button.bookingDisactive{
+        width: 92%;
+        position: absolute;
+        bottom: 0px; left: 25px;
+    }
+}
+
+/* 모바일 480 ~ 767 */
+@media screen and (max-width: 480px) {
+    
+}
+
+/* 0부터는 그냥 모바일 사이즈 유지? */
