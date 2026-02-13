@@ -275,71 +275,6 @@ $(function(){
 
     //mobile header
 
-    //headBanner
-    /* let mtexts = $('.mobileHeadBanner .textGroup');
-    let mindex = 0;
-
-    mtexts.eq(mindex).show();
-
-    setInterval(function () {
-        mtexts.eq(mindex).fadeOut(300, function () {
-            mindex = (mindex + 1) % mtexts.length;
-            mtexts.eq(mindex).fadeIn(300);
-        });
-    }, 3000);
-
-    $('.moNavMenuBar').click(function() {
-        // 클릭한 것만 토글하고 싶을 때 (현재 코드)
-        $(this).toggleClass('active');
-    });
-
-
-    //mobile location
-    let m = true;
-    $('.moLocation > ul>li').click(function(){
-        if(m ==true ){
-            $(this).find('>ul').show()
-            m = false;
-        }else{
-            $(this).find('>ul').hide()
-            m = true;
-        }
-    });
-
-    //mobilemenu자체
-    let mo = true;
-    $('.moNavMenuBar').click(function(){
-        if( mo == true){
-            $('.mobileMenu').css('opacity', 1);
-            mo = false;
-        }else{
-            $('.mobileMenu').css('opacity', 0);
-            mo = true;
-        }
-    });
-
-    let moRoomOpen = true;
-    $(document).on('click', '.moRoom', function(e) {
-        e.preventDefault();
-
-        if (moRoomOpen == true) {
-            // 예약창 열기
-            $('#header .roomWrap').css({
-                'display': 'flex',
-                'position': 'fixed',
-                'z-index': '10001'
-            }).hide().fadeIn(300);
-            
-            moRoomOpen = false;
-        } else {
-            // 예약창 닫기
-            $('#header .roomWrap').fadeOut(300);
-            
-            moRoomOpen = true;
-        }
-    }); */
-
-
     // 1. 모바일 상단 배너 텍스트 슬라이드
 
     let mtexts = $('.mobileHeadBanner .textGroup');
@@ -434,7 +369,16 @@ $(function(){
 
     });
 
-
+    /* let ml = true;
+    $('.moLanguage').on('click',function(){
+        if(ml){
+            $('.molanguageList').show();
+            ml= false;
+        }else{
+            $('.molanguageList').hide();
+            ml= true;
+        }
+    }); */
 
 
 
@@ -530,7 +474,14 @@ $(function(){
         slidesPerView: 4,
         spaceBetween:20,
         navigation: navigationOption,
-        allowTouchMove: true
+        allowTouchMove: true,
+        breakpoints: {
+            0: { slidesPerView: 1.2 },
+            768: { slidesPerView: 2.2 },
+            1024: { slidesPerView: 3 },
+            1200: { slidesPerView: 3.5 },
+            1280: { slidesPerView: 4 }
+        }
     };
 
     const normalSwiperOptions = {
@@ -541,8 +492,9 @@ $(function(){
         navigation: navigationOption,
         breakpoints: {
             0: { slidesPerView: 1.2 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
+            768: { slidesPerView: 2.6 },
+            1024: { slidesPerView: 2.9 },
+            1200: { slidesPerView: 4.2 },
             1280: { slidesPerView: 5 }
         }
     };
@@ -588,6 +540,7 @@ $(function(){
                     <img src="${item.image}" alt="${item.title}">
                     <h3>${item.title}</h3>
                     <p>${item.description}</p>
+                    <span>View hotel</span>
                 </article>
             `;
 
