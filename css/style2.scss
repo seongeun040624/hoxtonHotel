@@ -1283,7 +1283,8 @@ main{
             .subTit{display: block}
         }
         .reserve{
-            width: 100%;
+            width: 95%;
+            margin: 0 auto;
             height: 72px;
             position: relative;
             top: -40px;
@@ -1291,7 +1292,7 @@ main{
             form{
                 display: flex;
                 align-items: center;
-                max-width: 1280px;
+                //max-width: 1280px;
                 height: 100%;
                 margin: 0 auto;
 
@@ -2386,6 +2387,17 @@ main{
 
     main{
 
+        #content1{
+                    .rsvFind{
+
+                        span{
+                            font-size: 17px;
+                            text-align: center;
+                        }
+                    }
+                }
+            
+
         #content2{
             padding: 0 10px;
             
@@ -2511,6 +2523,16 @@ main{
 
 
     main{
+        #content1{
+            .reserve{
+                form{
+                    >div{ //공통속성
+                        padding: 15px 12px;
+                    }
+                }
+            }
+        }
+
         #content3{
             height: auto;
             margin-top: 20px;
@@ -2619,6 +2641,58 @@ main{
 
 
     main{
+        #content1{
+            .reserve{
+                form{
+
+                    >div{
+
+                        >label{
+                            width: 100%;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                        }
+                    }
+                    .rsvLocation{
+                        .reservLoc{
+
+                            span{
+                                display: block;
+                                width: 100%;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                            }
+
+                            ul{
+                                overflow-y: auto;  // 세로 내용이 넘치면 스크롤 생성
+                                overflow-x: auto;
+
+                                li{
+                                    font-size: 13px;
+                                    padding: 8px;
+
+                                    &:hover{
+                                        font-size: 13px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .rsvGuest{
+                        span.reservGuest{
+                            display: block;
+                            width: 100%;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                        }
+                    }
+                }
+            }
+        }
+
         #content2{
             padding: 0 10px;
             
@@ -3191,6 +3265,45 @@ main{
 
 
     main{
+
+        #content1{
+
+            .mainVideo{
+                height: 50%;
+            }
+            .videoTxt{
+                top: 20%; left: 40px;
+                font-size: 40px;
+            }
+            .reserve{
+                form{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+
+                    >div{ //공통속성
+                        width: 100%;
+                        height: 100%;
+                        padding: 15px 20px;
+
+                        &:not(:last-child){
+                            border-bottom: 1px solid #ddd;
+                        }
+                    }
+                    .rsvLocation{
+                        .reservLoc{
+
+                            ul{
+                                position: absolute;
+                                z-index: 1;
+                                max-height: 350px;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
         #content2{
             width: 100%;
