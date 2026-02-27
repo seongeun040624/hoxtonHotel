@@ -380,7 +380,7 @@ html, body{height: 100%;}
                 ul{
                     width: 100%;
                     position: relative;
-                    bottom: 175px; left: 8;
+                    bottom: 175px; left: 8px;
                     padding: 7px 10px;
                     background: #3e3a37;
                     z-index: 2;
@@ -3129,78 +3129,7 @@ main{
             }
         }
 
-        .etc{
-            height: 10%;
-            width: 100%;
-            background: #3e3a37;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 25px 10px;
-            text-align: center;
-            color: #ebebeb;
-            font-weight: 500;
-
-            .moLanguage{
-                width: 50%;
-                height: 100%;
-                position: relative;
-
-                span{
-                    display: inline-block;
-                    margin: 0 auto;
-                    padding: 10px 0;
-                    position: relative;
-                    cursor: pointer;
-                    padding-right: 15px;
-
-                    &:after{
-                        content: "";
-                        position: absolute;
-                        top: 14px; right: -20px;
-                        background: url(../img/arrow_white.svg) no-repeat center;
-                        width: 20px;
-                        height: 10px;
-                    }
-                }
-                .molanguageList{
-                    text-align: left;
-                    position: relative;
-                    bottom: 0px; right: 160px;
-                    width: 100%;
-                    height: auto;
-
-                    ul{
-                        
-                        padding: 7px 10px;
-                        background: #3e3a37;
-
-                        li{
-                            a{
-                                display: block;
-                                padding: 6px 0;
-                                color: #d6d6d6;
-                                font-size: 14px;
-
-                                &:hover{color: #fff;}
-                            }
-                        }
-                    }
-                }
-            }
-
-            .moOffters{
-                border-left: 1px solid #999;
-                width: 50%;
-                height: 100%;
-
-                span{
-                    display: block;
-                    padding: 10px 0;
-                    cursor: pointer;
-                }
-            }
-        }
+        
     }
 
     /* 1. 부모 #header 설정: 자식인 .roomWrap이 클릭되도록 통로 확보 */
@@ -3751,6 +3680,7 @@ main{
         }
 
     }
+    
 
     main{
 
