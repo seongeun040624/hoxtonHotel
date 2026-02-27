@@ -118,6 +118,7 @@ $(function(){
     });
     flatpickr("#resCheckDate", {
         locale: "en",
+        disableMobile: "true",
         dateFormat: "Y-m-d"
     });
     flatpickr("#reservDate", {
