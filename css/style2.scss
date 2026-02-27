@@ -351,9 +351,9 @@ html, body{height: 100%;}
         font-weight: 500;
 
         .moLanguage{
-            width: 50%;
             height: 100%;
-            position: relative;
+            
+            margin: 0 auto;
 
             span{
                 display: inline-block;
@@ -372,14 +372,18 @@ html, body{height: 100%;}
                     height: 10px;
                 }
             }
-            .molanguageList{text-align: left;
+            .molanguageList{
+                text-align: left;
+                display: none;
+                height: 500px;
 
                 ul{
-                    display: none;
-                    position: absolute;
-                    bottom: 30px; right: 160px;
+                    width: 100%;
+                    position: relative;
+                    bottom: 175px; left: 8;
                     padding: 7px 10px;
                     background: #3e3a37;
+                    z-index: 2;
 
                     li{
                         a{

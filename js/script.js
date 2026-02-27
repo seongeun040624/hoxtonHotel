@@ -369,7 +369,7 @@ $(function(){
 
     });
 
-    /* let ml = true;
+    let ml = true;
     $('.moLanguage').on('click',function(){
         if(ml){
             $('.molanguageList').show();
@@ -378,7 +378,7 @@ $(function(){
             $('.molanguageList').hide();
             ml= true;
         }
-    }); */
+    });
 
 
 
